@@ -21,9 +21,9 @@ const Testimonials = () => {
               alt="Client"
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-3 left-8 right-8 flex items-center space-x-2 bg-gray-800 px-3 py-1 rounded-full text-white text-xs md:text-sm">
+            <div className="absolute bottom-3 lg:left-24 lg:right-24  md:left-8 md:right-8 left-16 right-16 flex items-center space-x-2 bg-gray-800 px-3 py-1 rounded-full text-white text-xs md:text-sm">
               <span>Trusted Clients</span>
-              <div className="flex -space-x-1 overflow-hidden">
+              <div className="pl-4 flex -space-x-1 overflow-hidden">
                 <img
                   className="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-white"
                   src="https://source.unsplash.com/random/100x100/?person1"

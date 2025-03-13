@@ -91,7 +91,7 @@ const Products = () => {
     </div>
 
     
-    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8 mx-4 md:mx-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-6 mt-8 mx-4 md:mx-10">
       {products.map((products, index) => (
         <div
           key={index}

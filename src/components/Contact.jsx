@@ -48,7 +48,7 @@ const MapPin = () => (
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-white" id="contact">
+    <section className="py-20 bg-white mx-8" id="contact">
       <div className="container px-6 mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
@@ -93,9 +93,9 @@ const Contact = () => {
             </div>
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-6 text-center md:text-left">Contact Us</h3>
+            <h3 className="text-xl font-semibold mb-6  md:text-left sm:text-left">Contact Us</h3>
             <div className="space-y-4 text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start">
+              <div className="flex items-center  justify-center md:justify-start">
                 <Phone />
                 <p>+91 - 9811440664</p>
               </div>

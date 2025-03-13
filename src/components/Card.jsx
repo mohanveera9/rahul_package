@@ -1,7 +1,7 @@
 const Card = () => {
   return (
     <div
-      className="relative  h-72 md:h-96  mx- flex items-center justify-center rounded-2xl overflow-hidden"
+      className="relative  h-72 md:h-96  mx-16 flex items-center justify-center rounded-2xl overflow-hidden"
       style={{
         backgroundImage: "url('/your-background-image.jpg')",
         backgroundSize: "cover",
