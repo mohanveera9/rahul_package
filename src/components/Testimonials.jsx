@@ -1,5 +1,6 @@
 import Button1 from "../buttons/Button1.jsx";
 import { FaQuoteLeft } from "react-icons/fa";
+import Testimonial1 from "../Assests/testimonial1.jpg";
 
 const Testimonials = () => {
   return (
@@ -17,16 +18,16 @@ const Testimonials = () => {
         <div className="mt-8 flex flex-col md:flex-row items-center gap-6 w-full">
           <div className="relative w-full md:w-96 h-72 md:h-96 rounded-3xl overflow-hidden shadow-lg">
             <img
-              src="https://source.unsplash.com/random/400x400/?woman,city"
+              src={Testimonial1}
               alt="Client"
               className="w-full h-full object-cover"
             />
-            <div className="absolute bottom-3 lg:left-24 lg:right-24  md:left-8 md:right-8 left-16 right-16 flex items-center space-x-2 bg-gray-800 px-3 py-1 rounded-full text-white text-xs md:text-sm">
+            <div className="absolute bottom-3 lg:left-20 lg:right-20  md:left-8 md:right-8 left-16 right-16 flex items-center space-x-2 bg-gray-800 px-3 py-1 rounded-full text-white text-xs md:text-sm">
               <span>Trusted Clients</span>
               <div className="pl-4 flex -space-x-1 overflow-hidden">
                 <img
                   className="w-5 h-5 md:w-6 md:h-6 rounded-full border-2 border-white"
-                  src="https://source.unsplash.com/random/100x100/?person1"
+                  src={Testimonial1}
                   alt=""
                 />
                 <img
@@ -63,7 +64,7 @@ const Testimonials = () => {
               Their attention to detail and commitment to zero-defect printing
               have made them our trusted partner for years. Highly recommended!
             </div>
-            <div className="flex items-center mt-4 mx-4 md:mx-10 mb-4">
+            <div className="flex items-center mt-4 mx-4 md:mx-10 mb-8">
               <img
                 src="https://source.unsplash.com/random/50x50/?woman,face"
                 alt="Urvashi Bakliwal"

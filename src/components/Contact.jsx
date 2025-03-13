@@ -1,62 +1,18 @@
 import Button1 from "../buttons/Button1.jsx";
-const Phone = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5 mr-3 text-pink-500 mt-0.5"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-  </svg>
-)
-
-const Mail = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5 mr-3 text-pink-500 mt-0.5"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect width="20" height="16" x="2" y="4" rx="2" />
-    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-  </svg>
-)
-
-const MapPin = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    className="h-5 w-5 mr-3 text-pink-500 mt-0.5"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-    <circle cx="12" cy="10" r="3" />
-  </svg>
-)
+import { LuPhone, LuMail, LuMapPin } from "react-icons/lu"; // React Icons
 
 const Contact = () => {
   return (
-    <section className="py-20 bg-white mx-8" id="contact">
-      <div className="container px-6 mx-auto">
+    <section className="py-16 px-8 md:px-12 lg:px-20 bg-white" id="contact">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          {/* Left Side: Contact Form */}
           <div>
-            <h2 className="text-3xl font-bold mb-6 text-center md:text-left">Get in touch</h2>
+            <h2 className="text-3xl font-bold mb-6 sm:text-left">Get in touch</h2>
             <div className="space-y-8">
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-center md:text-left">Send a message</h3>
-                <p className="text-gray-600 mb-6 text-center md:text-left">
+                <h3 className="text-xl font-semibold mb-4 text-left md:text-left">Send a message</h3>
+                <p className="text-gray-600 mb-6 text-left md:text-left">
                   Have a question? Send us a message and we'll get back to you promptly!
                 </p>
                 <form className="space-y-4">
@@ -64,27 +20,27 @@ const Contact = () => {
                     <input
                       type="text"
                       placeholder="Name"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
                   <div>
                     <input
                       type="email"
                       placeholder="E-mail"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
                   <div>
                     <input
                       type="text"
                       placeholder="Phone Number"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                     />
                   </div>
                   <div>
                     <textarea
                       placeholder="Message"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md min-h-[120px] focus:outline-none focus:ring-2 focus:ring-pink-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md min-h-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500"
                     ></textarea>
                   </div>
                   <Button1 text="Send" />
@@ -92,27 +48,38 @@ const Contact = () => {
               </div>
             </div>
           </div>
+
+          {/* Right Side: Contact Details */}
           <div>
-            <h3 className="text-xl font-semibold mb-6  md:text-left sm:text-left">Contact Us</h3>
-            <div className="space-y-4 text-center md:text-left">
-              <div className="flex items-center  justify-center md:justify-start">
-                <Phone />
-                <p>+91 - 9811440664</p>
+            <h3 className="text-xl font-semibold mb-6 text-left">Contact Us</h3>
+            <div className="space-y-6 text-left">
+              <div className="flex items-center justify-start">
+                <LuPhone className="h-6 w-6 mr-3 text-blue-500" />
+                <p className="text-gray-700 text-lg">+91 - 9811440664</p>
               </div>
-              <div className="flex items-center justify-center md:justify-start">
-                <Mail />
-                <p>rahul.oswal@yahoo.co.in, rahul_packs@rediffmail.com</p>
+              <div className="flex items-center justify-start">
+                <LuMail className="h-6 w-6 mr-3 text-blue-500" />
+                <p className="text-gray-700 text-lg">rahul.oswal@yahoo.co.in</p>
               </div>
-              <div className="flex items-center justify-center md:justify-start">
-                <MapPin />
-                <p>Plot no. 240, Sec - 38 Phase 1, HSIIDC, RAI, SONIPAT, HARYANA - 131029</p>
+              <div className="flex items-center jjustify-start">
+                <LuMapPin className="h-6 w-6 mr-3 text-blue-500" />
+                <p className="text-gray-700 text-lg">
+                  Plot no. 240, Sec - 38 Phase 1, HSIIDC, RAI, SONIPAT, HARYANA - 131029
+                </p>
               </div>
             </div>
-            <div className="mt-8 h-[300px] bg-gray-200 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <p className="font-medium">Map</p>
-                <p className="text-sm text-gray-500">Interactive map would be displayed here</p>
-              </div>
+
+            {/* Map Section */}
+            <div className="mt-8 h-[300px] bg-gray-200 rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111722.40333054028!2d77.09458405!3d28.948080300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390db00b8670400b%3A0x9efbd3cd589b645e!2sSonipat%2C%20Haryana!5e0!3m2!1sen!2sin!4v1741878512113!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </div>
           </div>
         </div>

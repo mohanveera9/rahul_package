@@ -65,7 +65,7 @@ const KeyOffering = () => {
       </div>
 
       
-      <div className="bg-purple-100 mt-12 p-6 rounded-lg h-auto md:h-60 mx-4 md:mx-10 flex flex-col md:flex-row items-center justify-center relative overflow-hidden">
+      <div className="bg-gradient-to-r from-pink-100 to-purple-200 mt-12 p-6 rounded-lg h-auto md:h-60 mx-4 md:mx-10 flex flex-col md:flex-row items-center justify-center relative overflow-hidden">
        
         <img
           src="/Assets/left-image.png"
