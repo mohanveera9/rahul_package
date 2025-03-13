@@ -104,7 +104,7 @@ const Products = () => {
           />
           <div className="text-xl font-semibold mt-4">{products.title}</div>
           <div className="text-gray-600 mt-2 text-sm md:text-base">{products.description}</div>
-          <div className="mt-auto">
+          <div className="mt-4">
             <Button1 text="Download Brochure" />
           </div>
         </div>
