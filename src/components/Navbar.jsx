@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation(); // Get current route
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,11 +21,56 @@ const Navbar = () => {
     >
       <div className="text-2xl font-bold">Ⓡ</div>
       <ul className="hidden md:flex space-x-8 font-medium">
-        <li><Link to="/" className="hover:text-purple-600">Home</Link></li>
-        <li><Link to="/about" className="hover:text-purple-600">About Us</Link></li>
-        <li><Link to="/products" className="hover:text-purple-600">Products</Link></li>
-        <li><Link to="/infrastructure" className="hover:text-purple-600">Infrastructure</Link></li>
-        <li><Link to="/contact" className="hover:text-purple-600">Contact Us</Link></li>
+        <li>
+          <Link
+            to="/"
+            className={`hover:text-purple-600 ${
+              location.pathname === "/" ? "text-purple-600 font-semibold" : ""
+            }`}
+          >
+            Home
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/about"
+            className={`hover:text-purple-600 ${
+              location.pathname === "/about" ? "text-purple-600 font-semibold" : ""
+            }`}
+          >
+            About Us
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/products"
+            className={`hover:text-purple-600 ${
+              location.pathname === "/products" ? "text-purple-600 font-semibold" : ""
+            }`}
+          >
+            Products
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/infrastructure"
+            className={`hover:text-purple-600 ${
+              location.pathname === "/infrastructure" ? "text-purple-600 font-semibold" : ""
+            }`}
+          >
+            Infrastructure
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/contact"
+            className={`hover:text-purple-600 ${
+              location.pathname === "/contact" ? "text-purple-600 font-semibold" : ""
+            }`}
+          >
+            Contact Us
+          </Link>
+        </li>
       </ul>
       <button className="bg-purple-600 text-white px-5 py-2 rounded-full text-lg hover:bg-purple-700">
         Sign Up

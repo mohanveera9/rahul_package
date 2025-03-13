@@ -6,10 +6,11 @@ import Products from '../components/Products';
 import Testimonials from '../components/Testimonials';
 import Card from '../components/Card';
 import Contact from '../components/Contact';
+import Footer from '../components/Footer';
 
 const Home = () => {
   return (
-    <div>
+    <div className="overflow-x-hidden scrollbar-hide">
       <HeroSection />
       <KeyOfferings />
       <About />
