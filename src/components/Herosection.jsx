@@ -15,11 +15,14 @@ const HeroSection = () => {
       <div className="flex flex-col md:flex-row items-center justify-between px-10 py-24 lg:mx-8">
         {/* Text Content */}
         <div className="max-w-xl mt-10">
-          <span className="px-4 py-2 text-purple-600 bg-white rounded-full text-sm font-semibold">
-            Packaging Perfected
+          <span className="relative px-4 py-2 rounded-full text-sm font-semibold bg-white inline-block">
+            <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
+              Packaging Perfected
+            </span>
           </span>
           <h1 className="text-5xl font-bold text-gray-900 mt-4">
-            Redefining Excellence in <span className="text-purple-600">Pharmaceutical Packaging.</span>
+            Redefining Excellence in <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">Pharmaceutical{" "}</span>
+            <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">Packaging.</span>
           </h1>
           <p className="mt-4 text-gray-600">
             This is a rapidly growing manufacturer and supplier of pharmaceutical strip
@@ -29,7 +32,7 @@ const HeroSection = () => {
           {/* Buttons */}
           <div className="mt-6 flex space-x-4">
             <Button3 text="Explore" />
-            <button className="bg-gray-200 text-gray-900 px-6 py-3 rounded-full text-lg font-medium hover:bg-gray-300">
+            <button className="bg-white text-black px-6 py-3 rounded-full text-lg font-medium hover:bg-gray-300">
               Demo
             </button>
           </div>

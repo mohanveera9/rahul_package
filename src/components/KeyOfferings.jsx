@@ -11,13 +11,13 @@ const offerings = [
     title: "Aluminium Blister Foil",
     description:
       "Durable and lightweight packaging for pharmaceutical tablets and capsules, available in 20 or 25-micron variants.",
-    image: aluminiumImage  , 
+    image: aluminiumImage,
   },
   {
     title: "Foil Lids",
     description:
       "Durable, customizable, and designed for secure sealing across food, cosmetics, and pharmaceutical applications.",
-    image:  foillidImage,
+    image: foillidImage,
   },
   {
     title: "Soft Foil Chocolate Wrapping",
@@ -30,12 +30,12 @@ const offerings = [
 const KeyOffering = () => {
   return (
     <div className="text-center p-6 md:p-10">
-      
+
       <Button1 text="Our Key Offerings" />
       <div className="mt-3">
         <div className="font-semibold text-4xl md:text-6xl">Discover the</div>
         <div className="font-semibold text-4xl md:text-6xl">
-          core of <span className="text-purple-600">our Excellence</span>
+          core of <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">our Excellence</span>
         </div>
       </div>
       <div className="text-gray-600 mt-3 max-w-2xl mx-auto text-lg md:text-xl">
@@ -43,7 +43,7 @@ const KeyOffering = () => {
         for the pharmaceutical, food, and cosmetic industries.
       </div>
 
-      
+
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 mx-4 md:mx-10">
         {offerings.map((offering, index) => (
           <div
@@ -64,9 +64,9 @@ const KeyOffering = () => {
         ))}
       </div>
 
-      
+
       <div className="bg-gradient-to-r from-pink-100 to-purple-200 mt-12 p-6 rounded-lg h-auto md:h-60 mx-4 md:mx-10 flex flex-col md:flex-row items-center justify-center relative overflow-hidden">
-       
+
         <img
           src="/Assets/left-image.png"
           alt="Packaging Products"
@@ -75,10 +75,14 @@ const KeyOffering = () => {
 
         <div className="text-center">
           <div className="text-2xl md:text-3xl font-semibold">
-            Let’s Start Packaging Your <span className="text-purple-600">Success.</span>
+            Let’s Start Packaging Your <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">Success.</span>
           </div>
           <div className="pt-5">
-            <Button1 text="Request a Quote" />
+            <span className="relative px-6 py-3 rounded-full text-sm font-semibold bg-white inline-block">
+              <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text text-sm">
+                Request a Quote
+              </span>
+            </span>
           </div>
         </div>
 

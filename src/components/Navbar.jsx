@@ -72,7 +72,7 @@ const Navbar = () => {
           </Link>
         </li>
       </ul>
-      <button className="bg-purple-600 text-white px-5 py-2 rounded-full text-lg hover:bg-purple-700">
+      <button className="bg-gradient-to-r from-pink-500 to-purple-600 text-white px-5 py-2 rounded-full text-l hover:scale-105 duration-300">
         Sign Up
       </button>
     </nav>
