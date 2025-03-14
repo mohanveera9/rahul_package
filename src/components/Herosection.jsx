@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-screen bg-gradient-to-r from-pink-100 to-purple-200 rounded-xl">
+    <div className="relative bg-gradient-to-r from-pink-100 to-purple-200 rounded-xl">
       {/* Navbar */}
       <Navbar />
 
