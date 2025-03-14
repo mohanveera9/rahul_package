@@ -3,7 +3,7 @@ import { LuPhone, LuMail, LuMapPin } from "react-icons/lu"; // React Icons
 
 const Contact = () => {
   return (
-    <section className="py-16 px-8 md:px-12 lg:px-20 bg-white" id="contact">
+    <section className="py-16 px-8 md:px-4 lg:mx-16 bg-white" id="contact">
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Side: Contact Form */}

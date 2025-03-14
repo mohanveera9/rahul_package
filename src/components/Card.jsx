@@ -4,7 +4,7 @@ import Button3 from "../buttons/Button3";
 const Card = () => {
   return (
     <div
-      className="relative h-72 md:h-72 lg:mx-16 mx-8 flex items-center justify-center rounded-2xl overflow-hidden"
+      className="relative h-72 md:h-72 lg:mx-[88px] mx-8 md:mx-12 flex items-center justify-center rounded-2xl overflow-hidden"
       style={{
         backgroundImage: `url(${Cardimg})`,
         backgroundSize: "cover",

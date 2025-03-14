@@ -4,7 +4,7 @@ import Quote2 from "../Assests/Quote/Quote2.png";
 
 const Quote = () => {
     return (
-        <div className="bg-gradient-to-r from-pink-100 to-purple-200 mt-12 rounded-lg h-auto md:h-64 mx-4 md:mx-20 flex flex-col md:flex-row items-center justify-center relative overflow-hidden p-6 md:p-10">
+        <div className="bg-gradient-to-r from-pink-100 to-purple-200 mt-12 rounded-lg h-auto md:h-64 mx-6 md:mx-14 lg:mx-20 flex flex-col md:flex-row items-center justify-center relative overflow-hidden p-6 md:p-10">
 
             {/* Left Image - Adjusted to Corner with Border */}
             <img
@@ -19,8 +19,8 @@ const Quote = () => {
                     Let’s Start Packaging Your <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">Success.</span>
                 </div>
                 <div className="pt-5">
-                    <span className="relative px-6 py-3 rounded-full text-sm font-semibold bg-white inline-block shadow-lg">
-                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text text-sm">
+                    <span className="relative px-6 py-3 rounded-full text-sm font-semibold bg-white inline-block shadow-lg hover:cursor-pointer hover:scale-105 duration-200">
+                        <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text text-sm ">
                             Request a Quote
                         </span>
                     </span>

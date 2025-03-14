@@ -3,7 +3,7 @@ import Aboutimg from "../Assests/about.avif";
 
 const About = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center lg:mx-11 mx-3 mt-4 md:mx-8 py-16">
+    <section className="flex flex-col md:flex-row items-center lg:mx-12 mx-0 mt-4 md:mx-4 py-16">
       {/* Left Content */}
       <div className="md:w-3/5 lg:w-3/5 space-y-6 px-8">
         <Button1 text="About Us" />

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Logo from "../Assests/logo.png";
 
 const Footer = () => {
   return (
@@ -7,7 +8,10 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Company Info */}
         <div>
-          <h2 className="text-xl font-bold">Ⓡ Your Company</h2>
+          <div className="flex flex-row">
+            <img src={Logo} alt="Rahul Packaging Logo" className="h-10 w-auto" />
+            <h2 className="text-xl font-bold"> ahul Packaging</h2>
+          </div>
           <p className="mt-2 text-sm">
             Redefining Excellence in Pharmaceutical Packaging.
           </p>
