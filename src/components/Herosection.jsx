@@ -10,7 +10,7 @@ const HeroSection = () => {
       <Navbar />
 
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 pt-32 md:pt-32 lg:py-32">
+      <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 pt-32 md:pt-32 md:pb-20  lg:py-32">
         {/* Text Content */}
         <div className="max-w-2xl md:text-left">
           <span className="relative px-4 py-2 rounded-full text-sm font-semibold bg-white inline-block">
@@ -19,7 +19,7 @@ const HeroSection = () => {
             </span>
           </span>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mt-4 leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 leading-tight">
             Redefining Excellence in{" "}
             <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
               Pharmaceutical{" "}
@@ -35,7 +35,7 @@ const HeroSection = () => {
           </p>
 
           {/* Buttons */}
-          <div className="mt-6 flex sm:flex-row sm:items-start space-y-4 sm:space-y-0 sm:space-x-4">
+          <div className="mt-6 flex sm:flex-row sm:items-start space-y-4 space-x-4 md:space-y-0 sm:space-y-0 lg:space-y-0">
             <Button3 text="Explore" />
             <button className="bg-white text-black px-6 py-3 rounded-full text-lg font-medium hover:bg-gray-300">
               Demo
@@ -48,7 +48,7 @@ const HeroSection = () => {
           <img
             src={Heroimg}
             alt="Pharmaceutical Packaging"
-            className="w-72 md:w-96 lg:w-[450px]"
+            className=" lg:w-[450px]"
           />
         </div>
       </div>
