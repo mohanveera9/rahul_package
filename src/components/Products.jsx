@@ -1,74 +1,83 @@
 import Button1 from "../buttons/Button1";
-import aluminiumImage from "../Assests/aluminium.jpg";
-import foillidImage from "../Assests/foil-lids.jpg";
-import chocolateFoilImage from "../Assests/chocolate-foil.jpg";
+import Aluminium from "../Assests/Products/Aluminium_Blister_Foil.png";
+import Bopp from "../Assests/Products/bopp.png";
+import Four from "../Assests/Products/four_ply.png";
+import Glassine from "../Assests/Products/glassine.png";
+import Polyester from "../Assests/Products/Polyester.png";
+import Pr from "../Assests/Products/pr.png";
+import PVC from "../Assests/Products/pvc.png";
+import Soft from "../Assests/Products/Soft_foil_wrapper.png";
+import Alu from "../Assests/Products/alu.png"
+import Foil from "../Assests/Products/Foil_Lid.png";
+import Tripple from "../Assests/Products/triple.png";
+
 
 const products = [
   {
     title: "Aluminium Blister Foil",
     description:
       "Durable and lightweight packaging for pharmaceutical tablets and capsules, available in 20 or 25-micron variants.",
-    image: aluminiumImage  , 
+    image: Aluminium , 
   },
   {
     title: "Foil Lids",
     description:
       "Durable, customizable, and designed for secure sealing across food, cosmetics, and pharmaceutical applications.",
-    image:  foillidImage,
+    image:  Foil,
   },
   {
     title: "Soft Foil Chocolate Wrapping",
     description:
       "Premium, food-grade foil ensuring freshness, protection, and an elegant finish for your chocolates.",
-    image: chocolateFoilImage,
+    image: Soft,
   },
   {
     title: "Polyester Laminates",
     description:
       "Versatile, durable, and customizable packaging solutions for food, pharmaceutical, and consumer goods industries.",
-    image: foillidImage,
+    image: Polyester,
   },
   {
     title: " 4 Ply Laminate Pouches",
     description:
       "High-strength, multi-layer packaging designed for superior protection, freshness, and durability in diverse applications.",
-    image: foillidImage,
+    image: Four,
   },
   {
     title: " Glassine Paper Poly",
     description:
       "Smooth, grease-resistant, and eco-friendly packaging ideal for wrapping and protecting delicate products.",
-    image: foillidImage,
+    image: Glassine,
   },
   {
-    title: "Soft Foil Chocolate Wrapping",
+    title: "Triple Laminate Foils",
     description:
-      "Premium, food-grade foil ensuring freshness, protection, and an elegant finish for your chocolates.",
-    image: foillidImage,
+      "Durable, multi-layer packaging offering excellent barrier properties for optimal product protection and freshness.",
+    image: Tripple,
   },
   {
-    title: "Soft Foil Chocolate Wrapping",
+    title: "BOPP Film",
     description:
-      "Premium, food-grade foil ensuring freshness, protection, and an elegant finish for your chocolates.",
-    image: foillidImage,
+      "Versatile, durable, and high-quality packaging material widely used for its excellent clarity, strength, and printability.",
+    image: Bopp,
   },
   {
-    title: "Soft Foil Chocolate Wrapping",
+    title: "PP Resin Granules for IV Fluid Bottles",
     description:
-      "Premium, food-grade foil ensuring freshness, protection, and an elegant finish for your chocolates.",
-    image:foillidImage,
+      "High quality, durable, reliable material for IV fluid bottles.",
+    image: Pr,
   },
   {
-    title: "Soft Foil Chocolate Wrapping",
+    title: "PVC/PVDC",
     description:
-      "Premium, food-grade foil ensuring freshness, protection, and an elegant finish for your chocolates.",
-    image: foillidImage,
+      "Versatile material combination used for packaging, offering excellent barrier properties and durability.",
+    image: PVC,
   },
   {
-    title: "Soft Foil Chocolate Wrapping",
+    title: "ALU ALU FOIL",
     description:
-      "Premium, food-grade foil ensuring freshness, protection, and an elegant finish for your chocolates.",
-    image: foillidImage,
+      "protective, high-barrier material commonly used for packaging pharmaceuticals.",
+    image: Alu,
   },
 
 

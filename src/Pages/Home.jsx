@@ -7,6 +7,7 @@ import Testimonials from '../components/Testimonials';
 import Card from '../components/Card';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import Quote from '../components/Quote';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <HeroSection />
       <About />
       <KeyOfferings />
+      <Quote />
       <Products />
       <Card />
       <Testimonials />

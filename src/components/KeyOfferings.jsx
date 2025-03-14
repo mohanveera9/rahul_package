@@ -1,9 +1,9 @@
 
 import Button1 from "../buttons/Button1.jsx";
 import Button2 from "../buttons/Button2.jsx";
-import aluminiumImage from "../Assests/aluminium.jpg";
-import foillidImage from "../Assests/foil-lids.jpg";
-import chocolateFoilImage from "../Assests/chocolate-foil.jpg";
+import Soft from "../Assests/Products/Soft_foil_wrapper.png";
+import Alu from "../Assests/Products/alu.png"
+import Foil from "../Assests/Products/Foil_Lid.png";
 
 
 const offerings = [
@@ -11,19 +11,19 @@ const offerings = [
     title: "Aluminium Blister Foil",
     description:
       "Durable and lightweight packaging for pharmaceutical tablets and capsules, available in 20 or 25-micron variants.",
-    image: aluminiumImage,
+    image: Alu,
   },
   {
     title: "Foil Lids",
     description:
       "Durable, customizable, and designed for secure sealing across food, cosmetics, and pharmaceutical applications.",
-    image: foillidImage,
+    image: Foil,
   },
   {
     title: "Soft Foil Chocolate Wrapping",
     description:
       "Premium, food-grade foil ensuring freshness, protection, and an elegant finish for your chocolates.",
-    image: chocolateFoilImage,
+    image: Soft,
   },
 ];
 
@@ -62,35 +62,6 @@ const KeyOffering = () => {
             </div>
           </div>
         ))}
-      </div>
-
-
-      <div className="bg-gradient-to-r from-pink-100 to-purple-200 mt-12 p-6 rounded-lg h-auto md:h-60 mx-4 md:mx-10 flex flex-col md:flex-row items-center justify-center relative overflow-hidden">
-
-        <img
-          src="/Assets/left-image.png"
-          alt="Packaging Products"
-          className="hidden md:block absolute left-0 h-40 md:h-48 w-auto object-contain ml-4 md:ml-6"
-        />
-
-        <div className="text-center">
-          <div className="text-2xl md:text-3xl font-semibold">
-            Let’s Start Packaging Your <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">Success.</span>
-          </div>
-          <div className="pt-5">
-            <span className="relative px-6 py-3 rounded-full text-sm font-semibold bg-white inline-block">
-              <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text text-sm">
-                Request a Quote
-              </span>
-            </span>
-          </div>
-        </div>
-
-        <img
-          src="/Assets/right-image.png"
-          alt="Blister Foil"
-          className="hidden md:block absolute right-0 h-40 md:h-48 w-auto object-contain mr-4 md:mr-6"
-        />
       </div>
     </div>
   );
