@@ -15,8 +15,9 @@ const Home = () => {
       <KeyOfferings />
       <About />
       <Products />
-      <Testimonials />
       <Card />
+      <Testimonials />
+      
       <Contact />
       <Footer />
     </div>
