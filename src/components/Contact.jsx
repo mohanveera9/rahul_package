@@ -1,4 +1,4 @@
-import Button1 from "../buttons/Button1.jsx";
+
 import { LuPhone, LuMail, LuMapPin } from "react-icons/lu"; // React Icons
 
 const Contact = () => {
@@ -20,30 +20,32 @@ const Contact = () => {
                     <input
                       type="text"
                       placeholder="Name"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600"
                     />
                   </div>
                   <div>
                     <input
                       type="email"
                       placeholder="E-mail"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600"
                     />
                   </div>
                   <div>
                     <input
                       type="text"
                       placeholder="Phone Number"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600"
                     />
                   </div>
                   <div>
                     <textarea
                       placeholder="Message"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md min-h-[120px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-md min-h-[120px] focus:outline-none focus:ring-2 focus:ring-pink-600"
                     ></textarea>
                   </div>
-                  <Button1 text="Send" />
+                  <button className="w-full py-2 px-4 rounded-md text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition">
+                    Send
+                  </button>
                 </form>
               </div>
             </div>
@@ -54,15 +56,15 @@ const Contact = () => {
             <h3 className="text-xl font-semibold mb-6 text-left">Contact Us</h3>
             <div className="space-y-6 text-left">
               <div className="flex items-center justify-start">
-                <LuPhone className="h-6 w-6 mr-3 text-blue-500" />
+                <LuPhone className="h-6 w-6 mr-3 text-pink-600  " />
                 <p className="text-gray-700 text-lg">+91 - 9811440664</p>
               </div>
               <div className="flex items-center justify-start">
-                <LuMail className="h-6 w-6 mr-3 text-blue-500" />
+                <LuMail className="h-6 w-6 mr-3 text-pink-600" />
                 <p className="text-gray-700 text-lg">rahul.oswal@yahoo.co.in</p>
               </div>
               <div className="flex items-center jjustify-start">
-                <LuMapPin className="h-6 w-6 mr-3 text-blue-500" />
+                <LuMapPin className="h-6 w-6 mr-3 text-pink-600" />
                 <p className="text-gray-700 text-lg">
                   Plot no. 240, Sec - 38 Phase 1, HSIIDC, RAI, SONIPAT, HARYANA - 131029
                 </p>

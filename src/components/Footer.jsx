@@ -4,42 +4,40 @@ import Logo from "../Assests/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-to-r from-purple-600 to-pink-500 text-white py-8 px-10">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+    <footer className="bg-gradient-to-r from-pink-100 to-purple-200 text-white py-10 px-8 lg:px-20 md:px-14">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         {/* Company Info */}
-        <div>
-          <div className="flex flex-row">
-            <img src={Logo} alt="Rahul Packaging Logo" className="h-10 w-auto" />
-            <h2 className="text-xl font-bold"> ahul Packaging</h2>
+        <div className="text-black flex items-center space-x-3">
+          <img src={Logo} alt="Rahul Packaging Logo" className="h-12 w-auto" />
+          <div>
+            <h2 className="text-xl font-bold">ahul Packaging</h2>
+            <p className="mt-1 text-sm">edefining Excellence in Pharmaceutical Packaging.</p>
           </div>
-          <p className="mt-2 text-sm">
-            Redefining Excellence in Pharmaceutical Packaging.
-          </p>
         </div>
 
         {/* Quick Links */}
-        <div>
-          <h3 className="text-lg font-semibold">Quick Links</h3>
-          <ul className="mt-2 space-y-2 text-sm">
-            <li><Link to="/" className="hover:text-gray-300">Home</Link></li>
-            <li><Link to="/about" className="hover:text-gray-300">About</Link></li>
-            <li><Link to="/products" className="hover:text-gray-300">Products</Link></li>
-            <li><Link to="/contact" className="hover:text-gray-300">Contact</Link></li>
+        <div className="text-black">
+          <h3 className="text-lg font-semibold text-black mb-3">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li><Link to="/" className="hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">Home</Link></li>
+            <li><Link to="/about" className="hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">About</Link></li>
+            <li><Link to="/products" className="hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">Products</Link></li>
+            <li><Link to="/contact" className="hover:text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600">Contact</Link></li>
           </ul>
         </div>
 
         {/* Contact Info */}
-        <div>
-          <h3 className="text-lg font-semibold">Contact Us</h3>
-          <p className="mt-2 text-sm">Email: contact@yourcompany.com</p>
-          <p className="text-sm">Phone: +123 456 7890</p>
-          <p className="text-sm">Location: Hyderabad, India</p>
+        <div className="text-black space-y-3">
+          <h3 className="text-lg font-semibold text-black mb-3">Contact Us</h3>
+          <p className="text-sm">📧 Email: contact@yourcompany.com</p>
+          <p className="text-sm">📞 Phone: +123 456 7890</p>
+          <p className="text-sm">📍 Location: Hyderabad, India</p>
         </div>
       </div>
 
       {/* Copyright */}
-      <div className="mt-6 text-center text-sm border-t border-white/20 pt-4">
-        © {new Date().getFullYear()} Your Company. All rights reserved.
+      <div className="mt-8 text-center text-sm border-t border-black pt-4 text-black">
+        © {new Date().getFullYear()} Rahul Packaging. All rights reserved.
       </div>
     </footer>
   );
