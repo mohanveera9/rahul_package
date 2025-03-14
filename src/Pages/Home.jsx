@@ -12,12 +12,11 @@ const Home = () => {
   return (
     <div className="overflow-x-hidden scrollbar-hide">
       <HeroSection />
-      <KeyOfferings />
       <About />
+      <KeyOfferings />
       <Products />
       <Card />
       <Testimonials />
-      
       <Contact />
       <Footer />
     </div>
