@@ -16,7 +16,7 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed transition-all duration-300 z-50 flex justify-between items-center px-10 py-3 
+      className={`fixed transition-all duration-300 z-50 flex justify-between items-center px-6 py-3 
       ${isScrolled ? "top-0 left-0 right-0 bg-white shadow-md py-5 rounded-none" : "top-10 left-10 right-10 bg-white shadow-lg rounded-full"}`}
     >
       <div className="text-2xl font-bold">Ⓡ</div>
