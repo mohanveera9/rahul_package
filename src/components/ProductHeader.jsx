@@ -4,11 +4,11 @@ import { Link } from "react-router-dom";
 
 const ProductHeader = () => {
     return (
-        <div className="relative bg-gradient-to-r from-pink-100 to-purple-200 rounded-xl">
+        <div className="relative bg-gradient-to-r from-pink-100 to-purple-200 rounded-xl mb-10">
             <Navbar />
 
             {/* Hero Section */}
-            <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 pt-24 md:pt-32 pb-16 lg:py-32">
+            <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 pt-28 md:pt-32 pb-16 lg:py-32">
                 
                 {/* Text Content */}
                 <div className="text-center md:text-left">
