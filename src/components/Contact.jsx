@@ -64,7 +64,7 @@ const Contact = () => {
                 <p className="text-gray-700 text-lg">rahul.oswal@yahoo.co.in</p>
               </div>
               <div className="flex items-center jjustify-start">
-                <LuMapPin className="h-6 w-6 mr-3 text-pink-600" />
+                <LuMapPin className=" h-12 w-12 md:h-12 md:w-12 lg:h-6 lg:w-6 mr-3 text-pink-600" />
                 <p className="text-gray-700 text-lg">
                   Plot no. 240, Sec - 38 Phase 1, HSIIDC, RAI, SONIPAT, HARYANA - 131029
                 </p>
