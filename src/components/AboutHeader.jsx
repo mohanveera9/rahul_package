@@ -19,7 +19,7 @@ const AboutHeader = () => {
                         <span className="text-gray-900 font-semibold">About Us</span>
                     </nav>
 
-                    <h1 className="text-3xl md:text-5xl font-bold text-gray-900">
+                    <h1 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
                         Who We Are
                     </h1>
                     <p className="text-gray-700 mt-3 max-w-lg">

@@ -2,15 +2,19 @@ import React from "react";
 import Heroimg from "../Assests/heroimg.png";
 import Button3 from "../buttons/Button3";
 import Navbar from "./Navbar";
+import BgImage from "../Assests/bg.avif"; // Add a background image
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-gradient-to-r from-pink-100 to-purple-200 rounded-xl">
+    <div
+      className="relative bg-cover bg-center bg-no-repeat rounded-xl"
+      style={{ backgroundImage: `url(${BgImage})` }}
+    >
       {/* Navbar */}
       <Navbar />
 
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 pt-32 md:pt-32 md:pb-20  lg:py-32">
+      <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 pt-32 md:pt-32 md:pb-20 lg:py-32">
         {/* Text Content */}
         <div className="max-w-2xl md:text-left">
           <span className="relative px-4 py-2 rounded-full text-sm font-semibold bg-white inline-block">
@@ -31,7 +35,8 @@ const HeroSection = () => {
 
           <p className="mt-4 text-gray-600 text-lg md:text-xl">
             We are a rapidly growing manufacturer and supplier of pharmaceutical strip
-            packaging materials, renowned for flawless printing precision and impeccable quality standards.
+            packaging materials, renowned for flawless printing precision and impeccable
+            quality standards.
           </p>
 
           {/* Buttons */}
@@ -48,7 +53,7 @@ const HeroSection = () => {
           <img
             src={Heroimg}
             alt="Pharmaceutical Packaging"
-            className=" lg:w-[450px]"
+            className="lg:w-[450px]"
           />
         </div>
       </div>

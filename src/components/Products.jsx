@@ -31,7 +31,7 @@ const Products = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   return (
-    <div className="text-center p-6 md:p-10">
+    <div className="text-center p-6 mt-10 md:p-10">
       <Button1 text="Our Products" />
       <div className="mt-3">
         <div className="font-semibold text-4xl md:text-6xl">Innovative Solutions,</div>

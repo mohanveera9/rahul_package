@@ -7,21 +7,20 @@ const About = () => {
       {/* Left Content */}
       <div className="md:w-3/5 lg:w-3/5 space-y-6 px-8">
         <Button1 text="About Us" />
-        <p className="text-gray-500 text-lg font-semibold">
-          Driven by Quality, Defined by Innovation.
-        </p>
-        <h2 className="text-4xl font-semibold text-gray-800 leading-tight">
-          Delivering Unparalleled Quality and Prompt Service at{" "}
+        <h2 className="font-semibold text-4xl md:text-6xl">
+          Excellence in Packaging at{" "}
           <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
             Competitive Prices.
           </span>
         </h2>
         <p className="text-gray-600 text-lg">
-          Rahul Packaging excels in premium packaging solutions, offering a diverse range of
-          products tailored to the pharmaceutical, food, and cosmetic industries. With a steadfast
-          commitment to exceptional quality, reliable service, and innovative design, we leverage
-          state-of-the-art technology and industry expertise to meet the evolving needs of our
-          clients worldwide.
+          Rahul Packaging is a trusted name in premium packaging solutions, specializing in
+          high-quality materials for pharmaceutical, food, and cosmetic industries. We combine
+          state-of-the-art technology with years of expertise to create innovative and sustainable
+          packaging. Our focus is on precision, durability, and eco-friendly designs that meet
+          evolving industry standards. With a commitment to customer satisfaction, we ensure
+          timely delivery, competitive pricing, and unmatched service. Partner with us for
+          packaging solutions that enhance your brand and product presentation.
         </p>
       </div>
 
