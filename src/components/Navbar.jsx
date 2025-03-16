@@ -52,7 +52,7 @@ const Navbar = () => {
 
       {/* Desktop Sign-Up Button */}
       <button className="hidden md:block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-5 py-2 rounded-full text-l hover:scale-105 duration-300">
-        Sign Up
+        Quote
       </button>
 
       {/* Mobile Menu Button */}
@@ -90,7 +90,7 @@ const Navbar = () => {
         </ul>
         {/* Mobile Sign-Up Button */}
         <button className="mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-5 py-2 rounded-full text-l hover:scale-105 duration-300">
-          Sign Up
+          Quote
         </button>
       </div>
     </nav>
