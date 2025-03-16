@@ -60,26 +60,37 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Image */}
+          {/* Image - Adjusted size for different screens */}
           <div className="mt-10 md:mt-0 flex justify-center">
-            <img src={Heroimg} alt="Pharmaceutical Packaging" className="lg:w-[450px]" />
+            <img 
+              src={Heroimg} 
+              alt="Pharmaceutical Packaging" 
+              className="w-[250px] md:w-[350px] lg:w-[450px] transition-all duration-300"
+            />
           </div>
         </div>
 
-        {/* Trusted Companies Section (Placed Below Buttons) */}
+        {/* Trusted Companies Section */}
         <div className="mt-10 mb-16">
           <h2 className="text-center text-lg md:text-xl font-semibold text-gray-800 mb-6">
             Trusted by the most innovative companies
           </h2>
 
-          {/* Scrollable Company Logos */}
-          <div className="overflow-hidden w-full">
-            <div className="scrolling-container">
-              {/* Duplicating logos to create a seamless loop */}
-              <div className="scrolling-content">
-                {companyLogos.concat(companyLogos).map((logo, index) => (
-                  <img key={index} src={logo} alt={`Company ${index + 1}`} className="logo" />
-                ))}
+          {/* Scrollable Company Logos - Now works on all screens */}
+          <div className="w-full overflow-hidden">
+            <div className="relative flex items-center justify-center">
+              <div className="w-full flex overflow-hidden whitespace-nowrap">
+                <div className="flex space-x-8 md:space-x-12 scrolling-content">
+                  {/* Duplicating logos to create a seamless loop */}
+                  {companyLogos.concat(companyLogos).map((logo, index) => (
+                    <img
+                      key={index}
+                      src={logo}
+                      alt={`Company ${index + 1}`}
+                      className="h-10 md:h-12 lg:h-16 object-contain grayscale hover:grayscale-0 transition duration-300"
+                    />
+                  ))}
+                </div>
               </div>
             </div>
           </div>
@@ -90,14 +101,7 @@ const HeroSection = () => {
           {`
           @keyframes scroll {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); } /* Moves halfway, then repeats */
-          }
-
-          .scrolling-container {
-            display: flex;
-            overflow: hidden;
-            white-space: nowrap;
-            width: 100%;
+            100% { transform: translateX(-50%); }
           }
 
           .scrolling-content {
@@ -106,11 +110,10 @@ const HeroSection = () => {
             width: max-content;
           }
 
-          .logo {
-            height: 60px;
-            margin: 0 20px;
-            object-fit: contain;
-            filter: grayscale(100%); /* Converts images to black and white */
+          @media (max-width: 768px) {
+            .scrolling-content {
+              animation: scroll 12s linear infinite; /* Faster scroll for small screens */
+            }
           }
         `}
         </style>

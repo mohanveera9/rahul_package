@@ -1,10 +1,9 @@
-
+import { motion } from "framer-motion";
 import Button1 from "../buttons/Button1.jsx";
 import Button2 from "../buttons/Button2.jsx";
 import Soft from "../Assests/Products/Soft_foil_wrapper.png";
-import Alu from "../Assests/Products/alu.png"
+import Alu from "../Assests/Products/alu.png";
 import Foil from "../Assests/Products/Foil_Lid.png";
-
 
 const offerings = [
   {
@@ -29,8 +28,14 @@ const offerings = [
 
 const KeyOffering = () => {
   return (
-    <div className="text-center p-6 md:p-10">
-
+    <motion.div
+      className="text-center p-6 md:p-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
+      {/* heading */}
       <Button1 text="Our Key Offerings" />
       <div className="mt-3">
         <div className="font-semibold text-4xl md:text-6xl">Discover the</div>
@@ -42,13 +47,16 @@ const KeyOffering = () => {
         Rahul Packaging specializes in a range of premium packaging solutions tailored
         for the pharmaceutical, food, and cosmetic industries.
       </div>
-
-
+      {/* cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8 mx-2 lg:mx-12 md:mx-4">
         {offerings.map((offering, index) => (
-          <div
+          <motion.div
             key={index}
             className="border border-purple-300 p-6 rounded-lg shadow-md text-center flex flex-col h-auto md:h-auto"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
+            viewport={{ once: true }}
           >
             <img
               src={offering.image}
@@ -60,10 +68,10 @@ const KeyOffering = () => {
             <div className="mt-auto">
               <Button2 text="Learn more" />
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
 

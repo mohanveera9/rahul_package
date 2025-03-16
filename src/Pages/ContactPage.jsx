@@ -26,7 +26,7 @@ const ContactPage = () => {
         {/* Contact Form Section */}
         <div className="container py-16 px-4 md:px-4 ">
           <div className="mx-auto">
-            <h2 className="text-3xl font-bold mb-6 text-center">Send Us a Message</h2>
+            <h2 className="text-3xl font-semibold mb-6 text-center">Send Us a Message</h2>
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -84,7 +84,7 @@ const ContactPage = () => {
 
         {/* Contact Info Section */}
         <div className="mt-12 text-center px-4 sm:px-6 lg:px-8">
-          <h3 className="text-3xl font-bold mb-6">Contact Us</h3>
+          <h3 className="text-3xl font-semibold mb-6">Contact Us</h3>
 
           <div className="border border-gray-400 rounded-xl p-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">

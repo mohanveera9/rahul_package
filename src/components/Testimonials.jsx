@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import Button1 from "../buttons/Button1.jsx";
 import { FaQuoteLeft } from "react-icons/fa";
 import Testimonial1 from "../Assests/testimonial1.jpg";
@@ -40,7 +41,13 @@ const Testimonials = () => {
   return (
     <div className="p-4 md:p-10 mx-2 md:mx-4">
       <section className="flex flex-col items-center justify-center py-12 px-4 bg-white">
-        <div className="text-center">
+      <motion.div
+      className="text-center"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      viewport={{ once: true }}
+    >
           <Button1 text="Testimonials" />
           <div className="mt-3 text-2xl sm:text-3xl md:text-5xl font-semibold text-gray-800">
             Voices of Trust,
@@ -48,9 +55,9 @@ const Testimonials = () => {
           <div className="mt-2 text-2xl sm:text-3xl md:text-5xl font-semibold text-gray-800">
             success of <span className="text-purple-600">stories.</span>
           </div>
-        </div>
+        </motion.div>
 
-        <div className="mt-8 flex flex-col lg:flex-row items-center gap-6 w-full max-w-6xl">
+        <div className="mt-12 flex flex-col lg:flex-row items-center  gap-6 w-full max-w-6xl">
           {/* Image Section */}
           <div className="relative w-96 h-96 rounded-3xl overflow-hidden shadow-lg hidden lg:block">
             <img
@@ -58,7 +65,7 @@ const Testimonials = () => {
               alt="Client"
               className="w-full h-full object-cover transition-opacity duration-500"
             />
-            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 bg-gray-800 px-1 py-1 rounded-full text-white text-sm">
+            <div className="absolute bottom-3 left-1/2 transform -translate-x-1/2 flex items-center space-x-2 bg-gray-800 px-1 py-1  rounded-full text-white text-sm">
               <span>Trusted Clients</span>
               <div className="flex -space-x-1 overflow-hidden">
                 {testimonials.map((testimonial, index) => (
