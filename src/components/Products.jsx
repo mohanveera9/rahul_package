@@ -23,7 +23,7 @@ const products = [
   { title: "BOPP Film", description: "Versatile, durable, and high-quality packaging material widely used for its excellent clarity, strength, and printability.", image: Bopp },
   { title: "PP Resin Granules for IV Fluid Bottles", description: "High quality, durable, reliable material for IV fluid bottles.", image: Pr },
   { title: "PVC/PVDC", description: "Versatile material combination used for packaging, offering excellent barrier properties and durability.", image: PVC },
-  { title: "ALU ALU FOIL", description: "Protective, high-barrier material commonly used for packaging pharmaceuticals.", image: Alu },
+  { title: "ALU ALU FOIL", description: "Protective, high-barrier material commonly used for packaging pharmaceuticals.pharmaceuticals.", image: Alu },
 ];
 
 const Products = () => {
@@ -31,7 +31,7 @@ const Products = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   return (
-    <div className="text-center p-6 md:p-10">
+    <div className="text-center p-6 mt-10 md:p-10">
       <Button1 text="Our Products" />
       <div className="mt-3">
         <div className="font-semibold text-4xl md:text-6xl">Innovative Solutions,</div>
