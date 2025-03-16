@@ -23,77 +23,128 @@ const ContactPage = () => {
             referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
-      </div>
 
-      {/* Contact Form Section */}
-      <div className="container mx-auto py-16 px-4 lg:px-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-          {/* Left Side: Contact Form */}
-          <div>
-            <h2 className="text-3xl font-bold mb-6 sm:text-left">Get in touch</h2>
-            <div className="space-y-8">
+        {/* Contact Form Section */}
+        <div className="container mx-auto py-16 px-4 lg:px-40">
+          <div className="mx-auto">
+            <h2 className="text-3xl font-bold mb-6 text-center">
+              Send Us a Message
+            </h2>
+            <form className="space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label
+                    htmlFor="first-name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    First Name :
+                  </label>
+                  <input
+                    id="first-name"
+                    type="text"
+                    placeholder="First Name"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="last-name"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
+                    Last Name :
+                  </label>
+                  <input
+                    id="last-name"
+                    type="text"
+                    placeholder="Last Name"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600"
+                  />
+                </div>
+              </div>
               <div>
-                <h3 className="text-xl font-semibold mb-4 text-left">Send a message</h3>
-                <p className="text-gray-600 mb-6 text-left">
-                  Have a question? Send us a message and we'll get back to you promptly!
-                </p>
-                <form className="space-y-4">
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Name"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="email"
-                      placeholder="E-mail"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600"
-                    />
-                  </div>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Phone Number"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600"
-                    />
-                  </div>
-                  <div>
-                    <textarea
-                      placeholder="Message"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-md min-h-[120px] focus:outline-none focus:ring-2 focus:ring-pink-600"
-                    ></textarea>
-                  </div>
-                  <button className="w-full py-2 px-4 rounded-md text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition">
-                    Send
-                  </button>
-                </form>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Email <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="email"
+                  type="email"
+                  placeholder="Email Address"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-pink-600"
+                  required
+                />
               </div>
-            </div>
-          </div>
-
-          {/* Right Side: Contact Details */}
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-left">Contact Us</h3>
-            <div className="space-y-6 text-left">
-              <div className="flex items-center justify-start">
-                <LuPhone className="h-6 w-6 mr-3 text-pink-600" />
-                <p className="text-gray-700 text-lg">+91 - 9811440664</p>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-2"
+                >
+                  Your Message <span className="text-red-500">*</span>
+                </label>
+                <textarea
+                  id="message"
+                  placeholder="Your Message"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md min-h-[120px] focus:outline-none focus:ring-2 focus:ring-pink-600"
+                  required
+                ></textarea>
               </div>
-              <div className="flex items-center justify-start">
-                <LuMail className="h-6 w-6 mr-3 text-pink-600" />
-                <p className="text-gray-700 text-lg">rahul.oswal@yahoo.co.in</p>
-              </div>
-              <div className="flex items-center justify-start">
-                <LuMapPin className="h-6 w-6 mr-3 text-pink-600" />
-                <p className="text-gray-700 text-lg">
-                  Plot no. 240, Sec - 38 Phase 1, HSIIDC, RAI, SONIPAT, HARYANA - 131029
-                </p>
-              </div>
-            </div>
+              <button className="py-2 px-4 rounded-md text-white bg-black hover:opacity-90 transition">
+                Submit Form
+              </button>
+            </form>
           </div>
         </div>
+
+      {/* Contact Details at Bottom */}
+{/* Contact Details at Bottom */}
+{/* Contact Details at Bottom */}
+{/* Contact Details Section */}
+<div className="mt-12 text-center">
+  {/* Heading */}
+  <h3 className="text-3xl font-bold mb-6">Contact Us</h3>
+
+  {/* Bordered Container */}
+  <div className="border border-gray-400 rounded-xl p-8  mx-40">
+    
+    <div className="flex justify-between items-center">
+      
+      {/* Phone Section */}
+      <div className="flex flex-col items-center flex-1 border-r-2 border-gray-300 p-6">
+        <h4 className="text-2xl font-semibold mb-4 text-gray-800">Phone</h4>
+        <div className="flex items-center">
+          <LuPhone className="h-12 w-12 mr-4 text-pink-600" />
+          <p className="text-gray-700 text-xl font-medium">+91 - 9811440664</p>
+        </div>
+      </div>
+
+      {/* Email Section */}
+      <div className="flex flex-col items-center flex-1 border-r-2 border-gray-300 p-6">
+        <h4 className="text-2xl font-semibold mb-4 text-gray-800">Email</h4>
+        <div className="flex items-center">
+          <LuMail className="h-12 w-12 mr-4 text-pink-600" />
+          <p className="text-gray-700 text-xl font-medium">rahul.oswal@yahoo.co.in</p>
+        </div>
+      </div>
+
+      {/* Address Section */}
+      <div className="flex flex-col items-center flex-1 p-6">
+        <h4 className="text-2xl font-semibold mb-4 text-gray-800">Address</h4>
+        <div className="flex items-center">
+          <LuMapPin className="h-12 w-12 mr-4 text-pink-600" />
+          <p className="text-gray-700 text-xl font-medium text-center max-w-xs">
+            Plot no. 240, Sec - 38 Phase 1, HSIIDC, RAI, SONIPAT, HARYANA - 131029
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
       </div>
       <Footer />
     </section>
