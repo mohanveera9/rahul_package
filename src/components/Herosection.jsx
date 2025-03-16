@@ -14,7 +14,7 @@ import Company8 from "../Assests/companies/c8.png";
 import Company9 from "../Assests/companies/c9.png";
 
 const companyLogos = [
-  Company1, Company2, Company3, Company4, Company5, 
+  Company1, Company2, Company3, Company4, Company5,
   Company6, Company7, Company8, Company9
 ];
 
@@ -110,6 +110,7 @@ const HeroSection = () => {
             height: 60px;
             margin: 0 20px;
             object-fit: contain;
+            filter: grayscale(100%); /* Converts images to black and white */
           }
         `}
         </style>
