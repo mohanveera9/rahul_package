@@ -23,7 +23,7 @@ const products = [
   { title: "BOPP Film", description: "Versatile, durable, and high-quality packaging material widely used for its excellent clarity, strength, and printability.", image: Bopp },
   { title: "PP Resin Granules for IV Fluid Bottles", description: "High quality, durable, reliable material for IV fluid bottles.", image: Pr },
   { title: "PVC/PVDC", description: "Versatile material combination used for packaging, offering excellent barrier properties and durability.", image: PVC },
-  { title: "ALU ALU FOIL", description: "Protective, high-barrier material commonly used for packaging pharmaceuticals.", image: Alu },
+  { title: "ALU ALU FOIL", description: "Protective, high-barrier material commonly used for packaging pharmaceuticals.pharmaceuticals.", image: Alu },
 ];
 
 const Products = () => {
