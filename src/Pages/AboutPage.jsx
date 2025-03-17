@@ -2,6 +2,9 @@ import React from 'react'
 import AboutHeader from '../components/AboutHeader'
 import About from '../components/About'
 import Footer from '../components/Footer'
+import About1 from "../Assests/about1.png";
+import About2 from "../Assests/about2.jpg";
+import About3 from "../Assests/about3.png";
 
 const AboutPage = () => {
   const features = [
@@ -9,19 +12,19 @@ const AboutPage = () => {
       title: "Trusted & Quality-Driven",
       description:
         "Since 2005, Rahul Packaging has been a leading name in pharmaceutical packaging, ensuring zero-defect printing and superior product quality.",
-      image: "https://via.placeholder.com/300", // Replace with actual image URL
+      image: About1, // Replace with actual image URL
     },
     {
       title: "State-of-the-Art Infrastructure",
       description:
         "Equipped with fully automatic 4 & 3-color rotogravure printing machines and high-precision slitting machines, we deliver impeccable packaging solutions.",
-      image: "https://via.placeholder.com/300", // Replace with actual image URL
+      image: About2, // Replace with actual image URL
     },
     {
       title: "Global & Reputed Clientele",
       description:
         "Serving 20+ top pharmaceutical companies like Cipla, Lupin, Alkem, and international clients, we are a trusted packaging partner worldwide.",
-      image: "https://via.placeholder.com/300", // Replace with actual image URL
+      image: About3, // Replace with actual image URL
     },
   ];
   
@@ -42,7 +45,7 @@ const AboutPage = () => {
               <img
                 src={feature.image}
                 alt={feature.title}
-                className="w-full h-48 object-cover rounded-lg mb-4"
+                className="w-full h-48 object-cover rounded-sm mb-4 hover:translate-y-[-5px] duration-500 transition-all"
               />
               <h3 className="text-xl font-semibold text-gray-800 mb-2">
                 {feature.title}
