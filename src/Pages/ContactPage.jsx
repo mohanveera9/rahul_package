@@ -11,8 +11,8 @@ const ContactPage = () => {
       <ContactHeader />
 
       {/* Map Section */}
-      <div className="container mx-auto px-4 md:px-6 lg:px-8 py-12">
-        <div className="w-full max-w-[1200px] mx-auto h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg shadow-lg overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 lg:px-16 py-12">
+        <div className="w-full mx-auto h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] rounded-lg shadow-lg overflow-hidden mb-8 mt-10">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111722.40333054028!2d77.09458405!3d28.948080300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390db00b8670400b%3A0x9efbd3cd589b645e!2sSonipat%2C%20Haryana!5e0!3m2!1sen!2sin!4v1741878512113!5m2!1sen!2sin"
             width="100%"
@@ -102,17 +102,17 @@ const ContactPage = () => {
           <div className="border border-gray-400 rounded-xl p-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
               <div className="flex flex-col items-center p-6 border-b sm:border-b-0 sm:border-r border-gray-300">
-                <LuPhone className="h-12 w-12 text-pink-600 mb-2" />
+                <LuPhone className="h-8 w-10 lg:h-12 md:h-10 sm:w-12 text-pink-600 mb-2" />
                 <h4 className="text-2xl font-semibold mb-2 text-gray-800">Phone</h4>
                 <p className="text-gray-700 text-xl font-medium">+91 9811440664</p>
               </div>
               <div className="flex flex-col items-center p-6 border-b sm:border-b-0 sm:border-r border-gray-300">
-                <LuMail className="h-12 w-12 text-pink-600 mb-2" />
+                <LuMail className="h-8 w-10 lg:h-12  md:h-10  sm:w-12 text-pink-600 mb-2" />
                 <h4 className="text-2xl font-semibold mb-2 text-gray-800">Email</h4>
                 <p className="text-gray-700 text-xl font-medium break-words">rahul.oswal@yahoo.co.in</p>
               </div>
               <div className="flex flex-col items-center p-6">
-                <LuMapPin className="h-12 w-12 text-pink-600 mb-2" />
+                <LuMapPin className="h-8 w-10 lg:h-12  md:h-10  sm:w-12 text-pink-600 mb-2" />
                 <h4 className="text-2xl font-semibold mb-2 text-gray-800">Address</h4>
                 <p className="text-gray-700 text-xl font-medium text-center max-w-xs">
                   Plot no. 240, Sec - 38 Phase 1, HSIIDC, RAI, SONIPAT, HARYANA - 131029

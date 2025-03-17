@@ -1,7 +1,18 @@
 import React from 'react'
 import AboutHeader from '../components/AboutHeader'
-import About from '../components/About'
+
 import Footer from '../components/Footer'
+
+import { motion } from "framer-motion";
+import About1 from "../Assests/about1.png";
+import About2 from "../Assests/about2.jpg";
+import About3 from "../Assests/about3.png";
+import About from '../components/About';
+
+
+
+
+
 
 const AboutPage = () => {
   const features = [
@@ -31,7 +42,7 @@ const AboutPage = () => {
       <About />
 
       {/* Why Choose Us Section with Scroll Animation */}
-      <div className="bg-white py-12 px-6 text-center w-full mt-20 md:mt-10 sm:mt-4 mb-10">
+      <div className="bg-white py-12 px-6 text-center w-full mt-0 lg:mt-20 md:mt-10 sm:mt-4 mb-10 lg:pl-20 lg:pr-20">
         <motion.h2
           className="text-3xl font-bold text-gray-900 mb-20"
           initial={{ opacity: 0, y: 50 }} // Now it comes from down to up
