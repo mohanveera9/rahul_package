@@ -2,6 +2,7 @@ import { LuPhone, LuMail, LuMapPin } from "react-icons/lu"; // React Icons
 import ContactHeader from "../components/ContactHeader";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
   return (
@@ -24,7 +25,13 @@ const ContactPage = () => {
         </div>
 
         {/* Contact Form Section */}
-        <div className="container py-16 px-4 md:px-4 ">
+        <motion.div 
+          className="container py-16 px-4 md:px-4"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <div className="mx-auto">
             <h2 className="text-3xl font-semibold mb-6 text-center">Send Us a Message</h2>
             <form className="space-y-4">
@@ -80,29 +87,30 @@ const ContactPage = () => {
               </button>
             </form>
           </div>
-        </div>
+        </motion.div>
 
         {/* Contact Info Section */}
-        <div className="mt-12 text-center px-4 sm:px-6 lg:px-8">
+        <motion.div 
+          className="mt-12 text-center px-4 sm:px-6 lg:px-8"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
           <h3 className="text-3xl font-semibold mb-6">Contact Us</h3>
 
           <div className="border border-gray-400 rounded-xl p-4">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
-              {/* Phone Section */}
               <div className="flex flex-col items-center p-6 border-b sm:border-b-0 sm:border-r border-gray-300">
                 <LuPhone className="h-12 w-12 text-pink-600 mb-2" />
                 <h4 className="text-2xl font-semibold mb-2 text-gray-800">Phone</h4>
                 <p className="text-gray-700 text-xl font-medium">+91 9811440664</p>
               </div>
-
-              {/* Email Section */}
               <div className="flex flex-col items-center p-6 border-b sm:border-b-0 sm:border-r border-gray-300">
                 <LuMail className="h-12 w-12 text-pink-600 mb-2" />
                 <h4 className="text-2xl font-semibold mb-2 text-gray-800">Email</h4>
                 <p className="text-gray-700 text-xl font-medium break-words">rahul.oswal@yahoo.co.in</p>
               </div>
-
-              {/* Address Section */}
               <div className="flex flex-col items-center p-6">
                 <LuMapPin className="h-12 w-12 text-pink-600 mb-2" />
                 <h4 className="text-2xl font-semibold mb-2 text-gray-800">Address</h4>
@@ -112,7 +120,7 @@ const ContactPage = () => {
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
 
       <Footer />

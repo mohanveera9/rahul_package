@@ -1,5 +1,5 @@
-
 import { LuPhone, LuMail, LuMapPin } from "react-icons/lu"; // React Icons
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
@@ -7,7 +7,12 @@ const Contact = () => {
       <div className="container mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Left Side: Contact Form */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: -100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <h2 className="text-3xl font-bold mb-6 sm:text-left">Get in touch</h2>
             <div className="space-y-8">
               <div>
@@ -43,28 +48,33 @@ const Contact = () => {
                       className="w-full px-4 py-2 border border-gray-300 rounded-md min-h-[120px] focus:outline-none focus:ring-2 focus:ring-pink-600"
                     ></textarea>
                   </div>
-                  <button className="w-full py-2 px-4 rounded-md text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition">
+                  <button className="lg:w-52 md:w-40   py-2 px-4 rounded-md text-white bg-gradient-to-r from-pink-500 to-purple-600 hover:opacity-90 transition">
                     Send
                   </button>
                 </form>
               </div>
             </div>
-          </div>
+          </motion.div>
 
           {/* Right Side: Contact Details */}
-          <div>
+          <motion.div
+            initial={{ opacity: 0, x: 100 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
             <h3 className="text-xl font-semibold mb-6 text-left">Contact Us</h3>
             <div className="space-y-6 text-left">
               <div className="flex items-center justify-start">
-                <LuPhone className="h-6 w-6 mr-3 text-pink-600  " />
+                <LuPhone className="h-6 w-6 mr-3 text-pink-600" />
                 <p className="text-gray-700 text-lg">+91 - 9811440664</p>
               </div>
               <div className="flex items-center justify-start">
                 <LuMail className="h-6 w-6 mr-3 text-pink-600" />
                 <p className="text-gray-700 text-lg">rahul.oswal@yahoo.co.in</p>
               </div>
-              <div className="flex items-center jjustify-start">
-                <LuMapPin className=" h-12 w-12 md:h-12 md:w-12 lg:h-6 lg:w-6 mr-3 text-pink-600" />
+              <div className="flex items-center justify-start">
+                <LuMapPin className="h-6 w-6 mr-3 text-pink-600" />
                 <p className="text-gray-700 text-lg">
                   Plot no. 240, Sec - 38 Phase 1, HSIIDC, RAI, SONIPAT, HARYANA - 131029
                 </p>
@@ -83,7 +93,7 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               ></iframe>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>
