@@ -27,7 +27,7 @@ const About = () => {
           className="md:w-3/5 lg:w-3/5 space-y-6 px-8"
         >
           <Button1 text="About Us" />
-          <h2 className="font-semibold text-4xl md:text-6xl">
+          <h2 className="font-semibold text-4xl md:text-5xl lg:text-6xl">
             Excellence in Packaging at{" "}
             <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
               Competitive Prices.
@@ -57,7 +57,7 @@ const About = () => {
           <img
             src={Aboutimg}
             alt="Packaging Facility"
-            className="rounded-2xl shadow-lg w-full max-w-md md:max-w-xs"
+            className="rounded-2xl shadow-lg w-full max-w-md md:max-w-xs md:mt-32 lg:mt-12 md:h-80"
           />
         </motion.div>
       </div>

@@ -35,7 +35,7 @@ const HeroSection = () => {
               </span>
             </span>
 
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mt-4 leading-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl  font-semibold text-gray-900 mt-4 leading-tight">
               Redefining Excellence in{" "}
               <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
                 Pharmaceutical{" "}

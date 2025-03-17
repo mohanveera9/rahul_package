@@ -96,10 +96,10 @@ const Products = () => {
       >
         <Button1 text="Our Products" />
         <div className="mt-3">
-          <div className="font-semibold text-4xl md:text-6xl">
+          <div className="font-semibold text-4xl md:text-5xl lg:text-6xl">
             Innovative Solutions,
           </div>
-          <div className="font-semibold text-4xl md:text-6xl">
+          <div className="font-semibold text-4xl md:text-5xl lg:text-6xl">
             Tailored for{" "}
             <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
               Every Need.

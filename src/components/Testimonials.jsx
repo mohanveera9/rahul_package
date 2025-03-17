@@ -49,15 +49,15 @@ const Testimonials = () => {
       viewport={{ once: true }}
     >
           <Button1 text="Testimonials" />
-          <div className="mt-3 text-2xl sm:text-3xl md:text-5xl font-semibold text-gray-800">
+          <div className="mt-3 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-semibold text-gray-800">
             Voices of Trust,
           </div>
-          <div className="mt-2 text-2xl sm:text-3xl md:text-5xl font-semibold text-gray-800">
+          <div className="mt-2 text-2xl sm:text-3xl md:text-5xl lg:text-6xl  font-semibold text-gray-800">
             success of <span className="text-purple-600">stories.</span>
           </div>
         </motion.div>
 
-        <div className="mt-12 flex flex-col lg:flex-row items-center  gap-6 w-full max-w-6xl">
+        <div className="mt-14 flex flex-col lg:flex-row items-center  gap-6 w-full max-w-6xl">
           {/* Image Section */}
           <div className="relative w-96 h-96 rounded-3xl overflow-hidden shadow-lg hidden lg:block">
             <img
