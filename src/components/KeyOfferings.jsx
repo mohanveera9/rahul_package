@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Button1 from "../buttons/Button1.jsx";
 import Button2 from "../buttons/Button2.jsx";
@@ -27,6 +28,9 @@ const offerings = [
 ];
 
 const KeyOffering = () => {
+ const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
   return (
     <motion.div
       className="text-center p-6 md:p-10"
@@ -52,12 +56,41 @@ const KeyOffering = () => {
         {offerings.map((offering, index) => (
           <motion.div
             key={index}
-            className="border border-purple-300 p-6 rounded-lg shadow-md text-center flex flex-col h-auto md:h-auto"
+            className="border  p-6 rounded-lg shadow-md text-center flex flex-col h-auto md:h-auto relative"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              setMousePosition({
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top,
+              });
+            }}
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
             viewport={{ once: true }}
           >
+             {/* Border layer */}
+             <div
+              className="absolute inset-0 rounded-lg border-[1px] border-gray-300 pointer-events-none"
+              style={{
+                borderImageSource:
+                  hoveredIndex === index
+                    ? "linear-gradient(90deg, #ec4899, #8b5cf6)"
+                    : "none",
+                borderImageSlice: hoveredIndex === index ? 1 : "none",
+                maskImage:
+                  hoveredIndex === index
+                    ? `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,1) 15px, rgba(255,255,255,0.2) 80px, rgba(255,255,255,0) 100px)`
+                    : "none",
+                WebkitMaskImage:
+                  hoveredIndex === index
+                    ? `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,1) 15px, rgba(255,255,255,0.2) 80px, rgba(255,255,255,0) 100px)`
+                    : "none",
+              }}
+            />
+
             <img
               src={offering.image}
               alt={offering.title}
