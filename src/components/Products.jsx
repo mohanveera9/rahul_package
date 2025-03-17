@@ -29,7 +29,7 @@ const products = [
   {
     title: "Soft Foil Chocolate Wrapping",
     description:
-      "Premium, food-grade foil ensuring freshness, and an elegant finish for your chocolates,Provides a protective barrier against moisture.",
+      "Food-grade foil ensuring freshness, and an elegant finish for your chocolates,Provides a protective barrier against moisture.",
     image: Soft,
   },
   {
@@ -63,7 +63,7 @@ const products = [
     image: Bopp,
   },
   {
-    title: "PP Resin Granules for IV Fluid Bottles",
+    title: "PP Resin Granules for IV Fluid",
     description:
       "High quality, durable, reliable material for IV fluid bottles,Essential building blocks for a wide range of plastic products.",
     image: Pr,

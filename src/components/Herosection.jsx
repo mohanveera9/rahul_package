@@ -82,12 +82,12 @@ const HeroSection = () => {
               <div className="w-full flex overflow-hidden whitespace-nowrap">
                 <div className="flex space-x-8 md:space-x-12 scrolling-content">
                   {/* Duplicating logos to create a seamless loop */}
-                  {companyLogos.concat(companyLogos).map((logo, index) => (
+                  {companyLogos.concat(companyLogos).map((logo, index) => ( 
                     <img
                       key={index}
                       src={logo}
                       alt={`Company ${index + 1}`}
-                      className="h-10 md:h-12 lg:h-16 object-contain grayscale hover:grayscale-0 transition duration-300"
+                      className="h-5 md:h-7 lg:h-8 object-contain grayscale hover:grayscale-0 transition duration-300"
                     />
                   ))}
                 </div>
