@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom"; // Import for navigation
 import Button1 from "../buttons/Button1";
 import Aluminium from "../Assests/Products/Aluminium_Blister_Foil.png";
 import Bopp from "../Assests/Products/bopp.png";
@@ -8,10 +9,10 @@ import Glassine from "../Assests/Products/glassine.png";
 import Polyester from "../Assests/Products/Polyester.png";
 import Pr from "../Assests/Products/pr.png";
 import PVC from "../Assests/Products/pvc.png";
-import Soft from "../Assests/Products/Soft_foil_wrapper.png";
 import Alu from "../Assests/Products/alu.png";
 import Foil from "../Assests/Products/Foil_Lid.png";
 import Tripple from "../Assests/Products/triple.png";
+import Button3 from "../buttons/Button3";
 
 const products = [
   {
@@ -26,12 +27,11 @@ const products = [
       "Durable, customizable, and designed for secure sealing across food, cosmetics, and pharmaceutical applications.",
     image: Foil,
   },
-  {
-    title: "Soft Foil Chocolate Wrapping",
-    description:
-      "Food-grade foil ensuring freshness, and an elegant finish for your chocolates,Provides a protective barrier against moisture.",
-    image: Soft,
-  },
+ {
+     title: "Polyester Laminates",
+     description: "Provides excellent printability and innovative packing solutions for a range of applications.They offer durability and moisture resistance.",
+     image: Polyester,
+   },
   {
     title: "Polyester Laminates",
     description:
@@ -65,7 +65,7 @@ const products = [
   {
     title: "PP Resin Granules for IV Fluid",
     description:
-      "High quality, durable, reliable material for IV fluid bottles,Essential building blocks for a wide range of plastic products.",
+      "High quality, durable, reliable material for IV fluid bottles, essential building blocks for a wide range of plastic products.",
     image: Pr,
   },
   {
@@ -77,7 +77,7 @@ const products = [
   {
     title: "ALU ALU FOIL",
     description:
-      "Protective, high-barrier material commonly used for packaging pharmaceuticals.pharmaceuticals,Superior quality at competitive rates.",
+      "Protective, high-barrier material commonly used for packaging pharmaceuticals, superior quality at competitive rates.",
     image: Alu,
   },
 ];
@@ -85,10 +85,12 @@ const products = [
 const Products = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const navigate = useNavigate(); // For navigating to products page
 
   return (
-    <div className="text-center p-6 mt-10 md:p-10">
-     <motion.div
+    <div className="text-center p-6 mt-10 md:p-10 relative mb-20">
+      {/* Header Section */}
+      <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -112,12 +114,15 @@ const Products = () => {
         </div>
       </motion.div>
 
+      {/* Product Grid */}
       <motion.div
-       initial={{ opacity: 0, y: 50 }}
-       whileInView={{ opacity: 1, y: 0 }}
-       transition={{ duration: 0.8, ease: "easeOut", staggerChildren: 0.3 }}
-       viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-6 mt-8 mx-2 md:mx-4 lg:mx-12">
-        {products.map((product, index) => (
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut", staggerChildren: 0.3 }}
+        viewport={{ once: true }}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-6 mt-8 mx-2 md:mx-4 lg:mx-12 relative"
+      >
+        {products.slice(0, 6).map((product, index) => (
           <motion.div
             key={index}
             className="relative"
@@ -172,7 +177,17 @@ const Products = () => {
             </div>
           </motion.div>
         ))}
+
+        {/* Black Shadow on Last Row */}
+        <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-black to-transparent pointer-events-none" />
       </motion.div>
+
+      {/* Explore Button Positioned at 2/3 Height */}
+          {/* Explore Button Positioned at 2/3 Height */}
+          <div className="absolute inset-x-0 top-2/3 flex justify-center mt-72">
+        <Button3 to="/products" text="Explore" />
+      </div>
+
     </div>
   );
 };
