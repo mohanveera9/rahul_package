@@ -36,7 +36,7 @@ const AboutPage = () => {
       <About />
 
       {/* Our Story Section */}
-      <section className=" bg-white py-12 px-6 text-center w-full">
+      <section className=" bg-white py-12  text-center w-full">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-gray-900 mb-10"
           initial={{ opacity: 0, y: 50 }}
@@ -46,10 +46,10 @@ const AboutPage = () => {
         >
           Our Story
         </motion.h2>
-        <div className="flex flex-col mx-14 lg:flex-row items-stretch">
+        <div className="flex flex-col  lg:flex-row ">
       {/* Image Section */}
       <motion.div
-        className="flex-1 h-auto mt-4 lg:h-auto flex justify-center items-center"
+        className="flex-1 h-auto mt-4 lg:h-auto flex justify-center  items-center"
         initial={{ opacity: 0, x: -100 }} // Image starts off-screen to the left
         whileInView={{ opacity: 1, x: 0 }} // Slides in smoothly to original position
         viewport={{ once: true, amount: 0.2 }}
@@ -58,13 +58,13 @@ const AboutPage = () => {
         <img
           src={Aboutimg}
           alt="story"
-          className="w-4/5 h-full object-cover" // Ensures image fills available height
+          className="w-11/12 lg:w-4/5 h-full object-cover" // Ensures image fills available height
         />
       </motion.div>
 
       {/* Text Section */}
       <motion.div
-        className="flex-1 text-gray-600 text-left text-xl leading-relaxed max-w-4xl mx-auto p-5"
+        className="flex-1 text-gray-600 text-left text-base lg:text-xl leading-relaxed max-w-4xl  p-5"
         initial={{ opacity: 0, x: 100 }} // Text starts off-screen to the right
         whileInView={{ opacity: 1, x: 0 }} // Slides in smoothly to original position
         viewport={{ once: true, amount: 0.2 }}
@@ -101,7 +101,7 @@ const AboutPage = () => {
       </motion.div>
     </div>
       </section>
-      <div className="bg-gradient-to-r from-pink-100 to-purple-200 rounded-3xl mx-20 py-12 mt-14">
+      <div className="bg-gradient-to-r from-pink-100 to-purple-200 rounded-3xl mx-5 lg:mx-20 py-12  mt-14">
         <div className="flex flex-col lg:flex-row  rounded-lg">
           {/* Our Clients Section with Image */}
           <div className=" py-12 px-6 text-center w-full lg:w-1/2">
@@ -122,9 +122,9 @@ const AboutPage = () => {
               <img
                 src=""
                 alt="Our Clients"
-                className="w-full lg:w-3/4 h-64 object-cover rounded-sm shadow-lg hover:translate-y-[-5px] duration-500 transition-all"
+                className="w-full md:w-2/3 lg:w-3/4 h-64 object-cover rounded-sm shadow-lg hover:translate-y-[-5px] duration-500 transition-all"
               />
-              <p className="text-gray-700 lg:w-3/4 text-left leading-relaxed">
+              <p className="text-gray-700 w-full md:w-2/3  lg:w-3/4 text-left leading-relaxed">
               Rahul Packaging's portfolio of esteemed clients, which includes some of the top pharmaceutical businesses in India, is one of its main competitive advantages. <strong> Alkem</strong>, <strong>Cipla</strong>, <strong>Macleods</strong>, <strong> Micro Labs</strong>, <strong>Lupin</strong>, <strong>Intas</strong>,<strong> Ajanta Pharma</strong>, and <strong>Dava</strong> India are a few of its prestigious clientele. These relationships illustrate the trust and confidence these prominent pharmaceutical businesses have in Rahul Packaging's ability to provide high-quality foil printing services. write in short striking message
               </p>
             </motion.div>
@@ -149,9 +149,9 @@ const AboutPage = () => {
               <img
                 src=""
                 alt="Machinery"
-                className="w-full lg:w-3/4 h-64 object-cover rounded-sm shadow-lg hover:translate-y-[-5px] duration-500 transition-all"
+                className=" w-full md:w-2/3  lg:w-3/4 h-64 object-cover rounded-sm shadow-lg hover:translate-y-[-5px] duration-500 transition-all"
               />
-              <p className="text-gray-700 lg:w-3/4 text-left leading-relaxed">
+              <p className="text-gray-700  w-full md:w-2/3  lg:w-3/4 text-left leading-relaxed">
               Rahul Packaging leverages cutting-edge technology, including <strong>Rotogravure printing machines</strong>, to achieve high-quality and vibrant graphics on packaging materials. These machines ensure precision and consistency in the printing process. Additionally,<strong> slitting machines </strong>are employed to customize material widths, providing tailored packaging solutions to meet specific client needs.
               </p>
             </motion.div>
@@ -160,7 +160,7 @@ const AboutPage = () => {
       </div>
 
       {/* Why Choose Rahul Packaging Section */}
-      <div className="bg-white py-12 px-6 text-center mt-10 mb-10 mx-16">
+      <div className="bg-white py-12 px-6 text-center mt-10 mb-10 mx-2 lg:mx-16">
         <motion.h2
           className="text-3xl font-bold text-gray-900 mb-10"
           initial={{ opacity: 0, y: 50 }}
