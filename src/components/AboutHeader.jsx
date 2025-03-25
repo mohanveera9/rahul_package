@@ -8,7 +8,7 @@ const AboutHeader = () => {
     <div
       className="relative bg-cover bg-center bg-no-repeat rounded-xl"
       style={{
-        backgroundImage: `linear-gradient(to right, #ede9fe 20%, rgba(255, 255, 255, 0) 80%), url(${AboutBg})`,
+        backgroundImage: `linear-gradient(to right, #ede9fe 30%, rgba(255, 255, 255, 0) 70%), url(${AboutBg})`,
       }}
     >
       <Navbar />
