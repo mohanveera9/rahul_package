@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Button1 from "../buttons/Button1.jsx";
 import Button2 from "../buttons/Button2.jsx";
-import Polyester from "../Assests/Products/polyester.png";
+import Polyester from "../Assests/Products/Polyester.png";
 import Alu from "../Assests/Products/alu.png";
 import Foil from "../Assests/Products/Foil_Lid.png";
 

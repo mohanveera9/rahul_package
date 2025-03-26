@@ -10,12 +10,14 @@ const HeroSection = () => {
       <div className="relative flex flex-col lg:flex-row items-center min-h-screen">
         {/* Left Section - Text Content */}
         <div className="w-full lg:w-1/3 relative z-10 text-center lg:text-left px-6 lg:px-28 py-12 lg:py-0 pt-32">
-          <div className="text-3xl md:text-5xl lg:text-5xl xl:text-7xl text-gray-900 leading-tight ">
-            <div>Redefining</div>
-            <div>
-              <span className="text-blue-700 font-bold">Pharma</span>{" "}
-              <span className="text-pink-500 font-bold">Packaging</span>
+          <div className="text-2xl md:text-5xl lg:text-5xl xl:text-7xl text-gray-900 leading-tight ">
+            <div>Redefining Excellence</div>
+            <div className="flex flex-row gap-x-2">
+            <div>in{" "}</div>
+            <div>Pharmaceutical</div>
             </div>
+            <div>packaging</div>
+            
           </div>
 
           <p className="mt-4 text-gray-600 text-base md:text-lg max-w-md mx-auto lg:mx-0">
