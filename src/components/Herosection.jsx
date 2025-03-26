@@ -9,12 +9,12 @@ const HeroSection = () => {
       <Navbar />
       <div className="relative flex flex-col lg:flex-row items-center min-h-screen">
         {/* Left Section - Text Content */}
-        <div className="w-full lg:w-1/2 relative z-10 text-center lg:text-left px-6 lg:px-12 py-12 lg:py-0 pt-32">
-          <div className="text-2xl md:text-3xl lg:text-5xl xl:text-6xl text-gray-900 leading-tight font-bold">
+        <div className="w-full lg:w-1/3 relative z-10 text-center lg:text-left px-6 lg:px-28 py-12 lg:py-0 pt-32">
+          <div className="text-2xl md:text-3xl lg:text-5xl xl:text-7xl text-gray-900 leading-tight ">
             <div>Redefining</div>
             <div>
-              <span className="text-blue-700">Pharma</span>{" "}
-              <span className="text-pink-500">Packaging</span>
+              <span className="text-blue-700 font-bold">Pharma</span>{" "}
+              <span className="text-pink-500 font-bold">Packaging</span>
             </div>
           </div>
 
@@ -28,7 +28,7 @@ const HeroSection = () => {
         </div>
 
         {/* Right Section - Image with Responsive Fade Effect */}
-        <div className="w-full lg:w-1/2 relative h-[300px] lg:h-screen">
+        <div className="w-full lg:w-2/3 relative h-[300px] lg:h-screen">
           <img
             src={Heroimg}
             alt="Pharmaceutical Packaging"
@@ -50,8 +50,8 @@ const HeroSection = () => {
                 linear-gradient(to right, 
                   rgba(255, 255, 255, 1) 0%, 
                   rgba(255, 255, 255, 1) 0px, 
-                  rgba(255, 255, 255, 0.9) 5%, 
-                  rgba(255, 255, 255, 0.5) 10%, 
+                  rgba(255, 255, 255, 0.9) 20%, 
+                  rgba(255, 255, 255, 0.5) 35%, 
                   rgba(255, 255, 255, 0) 100%
                 )
               `,
@@ -66,7 +66,7 @@ const HeroSection = () => {
                 `linear-gradient(to bottom, 
                 rgba(255, 255, 255, 1) 0%,
                  rgba(255, 255, 255, 0.8) 10%,
-                  rgba(255, 255, 255, 0.4) 20%, 
+                  rgba(255, 255, 255, 0.4) 30%, 
                   rgba(255, 255, 255, 0) 100%
                   )`,
             }}
