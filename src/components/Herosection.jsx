@@ -5,12 +5,12 @@ import Heroimg from "../Assests/heroimage.jpg"
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-white rounded-xl overflow-hidden">
+    <div className="relative bg-white  overflow-hidden">
       <Navbar />
       <div className="relative flex flex-col lg:flex-row items-center min-h-screen">
         {/* Left Section - Text Content */}
         <div className="w-full lg:w-1/3 relative z-10 text-center lg:text-left px-6 lg:px-28 py-12 lg:py-0 pt-32">
-          <div className="text-2xl md:text-3xl lg:text-5xl xl:text-7xl text-gray-900 leading-tight ">
+          <div className="text-3xl md:text-5xl lg:text-5xl xl:text-7xl text-gray-900 leading-tight ">
             <div>Redefining</div>
             <div>
               <span className="text-blue-700 font-bold">Pharma</span>{" "}
@@ -65,8 +65,8 @@ const HeroSection = () => {
               backgroundImage:
                 `linear-gradient(to bottom, 
                 rgba(255, 255, 255, 1) 0%,
-                 rgba(255, 255, 255, 0.8) 10%,
-                  rgba(255, 255, 255, 0.4) 30%, 
+                 rgba(255, 255, 255, 0.8) 20%,
+                  rgba(255, 255, 255, 0.4) 50%, 
                   rgba(255, 255, 255, 0) 100%
                   )`,
             }}

@@ -2,12 +2,13 @@ import React from 'react';
 import Navbar from './Navbar';
 import { Link } from "react-router-dom";
 import AboutBg from "../Assests/about.avif";
+import ContactBg from "../Assests/contact.jpg";
 
 const ContactHeader = () => {
     return (
-        <div className="relative bg-cover bg-center bg-no-repeat rounded-xl"
+        <div className="relative bg-cover bg-current bg-no-repeat rounded-xl"
                       style={{
-                        backgroundImage: `linear-gradient(to right, #ede9fe 20%, rgba(255, 255, 255, 0) 80%), url(${AboutBg})`,
+                        backgroundImage: `linear-gradient(to right, #ede9fe 20%, rgba(255, 255, 255, 0) 60%), url(${ContactBg})`,
                       }}>
             <Navbar />
 
