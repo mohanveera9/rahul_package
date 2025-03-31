@@ -1,90 +1,122 @@
 import React from "react";
+import Heroimg from "../Assests/heroimg.png";
 import Button3 from "../buttons/Button3";
 import Navbar from "./Navbar";
-import Heroimg from "../Assests/heroimage.jpg";
+import BgImage from "../Assests/bg.avif";
+import Company1 from "../Assests/companies/c1.png";
+import Company2 from "../Assests/companies/c2.png";
+import Company3 from "../Assests/companies/c3.png";
+import Company4 from "../Assests/companies/c4.png";
+import Company5 from "../Assests/companies/c5.png";
+import Company6 from "../Assests/companies/c6.png";
+import Company7 from "../Assests/companies/c7.png";
+import Company8 from "../Assests/companies/c8.png";
+import Company9 from "../Assests/companies/c9.png";
+
+const companyLogos = [
+  Company1, Company2, Company3, Company4, Company5,
+  Company6, Company7, Company8, Company9
+];
 
 const HeroSection = () => {
   return (
-    <div className="relative bg-[#FFF2DF] overflow-hidden">
+    <div className="relative bg-cover bg-center bg-no-repeat rounded-xl" style={{ backgroundImage: `url(${BgImage})` }}>
+      {/* Navbar */}
       <Navbar />
-      <div className="relative flex flex-col lg:flex-row items-center min-h-screen container mx-auto">
-        {/* Left Section - Text Content */}
-        <div className="w-full lg:w-1/2 relative z-10 text-left px-8 lg:px-12 py-12 lg:py-0 space-y-4">
-          <div className="text-left">
-            <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-5xl xl:text-6xl text-gray-900 leading-tight mt-24  lg:mt-0">
-              <div className="flex flex-row  gap-2 mb-2">
-                <span>Redefining</span>
-                <span>Excellence</span>
-              </div>
-              <div className="flex-row  font-semibold mb-2">
-                <span>in{" "}</span>
-                <span className="bg-gradient-to-r from-[#D3A376] to-[#8C6E63] text-transparent bg-clip-text">
-                  Pharmaceutical
-                </span>
-              </div>
-              <div className="font-semibold bg-gradient-to-r from-[#D3A376] to-[#8C6E63] text-transparent bg-clip-text pb-3">
-                Packaging
-              </div>
+
+      {/* Hero Section */}
+      <div className="flex flex-col">
+        <div className="flex flex-col md:flex-row items-center justify-between px-6 md:px-12 lg:px-20 pt-32 md:pt-32">
+          {/* Text Content */}
+          <div className="max-w-2xl md:text-left">
+            <span className="relative px-4 py-2 rounded-full text-sm font-semibold bg-white inline-block">
+              <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
+                Packaging Perfected
+              </span>
+            </span>
+
+            <h1 className="text-3xl md:text-4xl lg:text-5xl  font-semibold text-gray-900 mt-4 leading-tight">
+              Redefining Excellence in{" "}
+              <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
+                Pharmaceutical{" "}
+              </span>
+              <span className="bg-gradient-to-r from-pink-500 to-purple-600 text-transparent bg-clip-text">
+                Packaging.
+              </span>
             </h1>
-            
-            <p className="mt-2 md:mt-4 text-gray-600 text-base md:text-lg max-w-2xl mx-auto lg:mx-0 text-left">
-              This is a rapidly growing manufacturer and supplier of pharmaceutical 
-              strip packaging materials,<span className="hidden md:block"> renowned for its flawless printing precision 
-              and impeccable quality standards.</span>
+
+            <p className="mt-4 text-gray-600 text-lg md:text-xl">
+              We are a rapidly growing manufacturer and supplier of pharmaceutical strip
+              packaging materials, renowned for flawless printing precision and impeccable
+              quality standards.
             </p>
-            
-            <div className="mt-8 flex justify-start">
+
+            {/* Buttons */}
+            <div className="mt-6 flex sm:flex-row sm:items-start space-x-4 md:space-y-0 sm:space-y-0 lg:space-y-0">
               <Button3 text="Explore" />
+              <button className="bg-white text-black px-6 py-3 rounded-full text-lg font-medium hover:bg-gray-300">
+                Demo
+              </button>
+            </div>
+          </div>
+
+          {/* Image - Adjusted size for different screens */}
+          <div className="mt-10 md:mt-0 flex justify-center">
+            <img 
+              src={Heroimg} 
+              alt="Pharmaceutical Packaging" 
+              className="w-[250px] md:w-[350px] lg:w-[450px] transition-all duration-300"
+            />
+          </div>
+        </div>
+
+        {/* Trusted Companies Section */}
+        <div className="mt-10 mb-16">
+          <h2 className="text-center text-lg md:text-xl font-semibold text-gray-800 mb-6">
+            Trusted by the most innovative companies
+          </h2>
+
+          {/* Scrollable Company Logos - Now works on all screens */}
+          <div className="w-full overflow-hidden">
+            <div className="relative flex items-center justify-center">
+              <div className="w-full flex overflow-hidden whitespace-nowrap">
+                <div className="flex space-x-8 md:space-x-12 scrolling-content">
+                  {/* Duplicating logos to create a seamless loop */}
+                  {companyLogos.concat(companyLogos).map((logo, index) => ( 
+                    <img
+                      key={index}
+                      src={logo}
+                      alt={`Company ${index + 1}`}
+                      className="h-5 md:h-7 lg:h-8 object-contain grayscale hover:grayscale-0 transition duration-300"
+                    />
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Right Section - Image with Responsive Fade Effect */}
-        <div className="w-full lg:w-1/2 relative h-[400px] sm:h-[500px] lg:h-screen mt-8 lg:mt-0">
-          <div className="absolute inset-0">
-            <img
-              src={Heroimg}
-              alt="Pharmaceutical Packaging"
-              className="w-full h-full object-cover"
-            />
-            
-            {/* Fade Effect for Large Screens (Left to Right) */}
-            <div 
-              className="hidden lg:block absolute inset-0 pointer-events-none"
-              style={{
-                backgroundImage: `
-                  linear-gradient(to bottom,
-                    rgba(255, 242, 223, 1) 0%,
-                    rgba(255, 242, 223, 0.9) 0%,
-                    rgba(255, 242, 223, 0.7) 0%,
-                    rgba(255, 242, 223, 0.4) 5%,
-                    rgba(255, 242, 223, 0) 10%
-                  ),
-                  linear-gradient(to right,
-                    rgba(255, 242, 223, 1) 0%,
-                    rgba(255, 242, 223, 1) 0px,
-                    rgba(255, 242, 223, 0.9) 10%,
-                    rgba(255, 242, 223, 0.5) 60%,
-                    rgba(255, 242, 223, 0) 100%
-                  )
-                `,
-              }}
-            />
-            
-            {/* Fade Effect for Small Screens (Top to Bottom) */}
-            <div 
-              className="lg:hidden absolute inset-0 pointer-events-none"
-              style={{
-                backgroundImage: `linear-gradient(to bottom,
-                  rgba(255, 242, 223, 1) 0%,
-                  rgba(255, 242, 223, 0.8) 20%,
-                  rgba(255, 242, 223, 0.4) 50%,
-                  rgba(255, 242, 223, 0) 100%
-                )`,
-              }}
-            />
-          </div>
-        </div>
+        {/* Animation Styles */}
+        <style>
+          {`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+
+          .scrolling-content {
+            display: flex;
+            animation: scroll 15s linear infinite;
+            width: max-content;
+          }
+
+          @media (max-width: 768px) {
+            .scrolling-content {
+              animation: scroll 12s linear infinite; /* Faster scroll for small screens */
+            }
+          }
+        `}
+        </style>
       </div>
     </div>
   );

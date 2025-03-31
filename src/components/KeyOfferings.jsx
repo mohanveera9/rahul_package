@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import Button1 from "../buttons/Button1.jsx";
 import Button2 from "../buttons/Button2.jsx";
-import Polyester from "../Assests/Products/Polyester.png";
+import Soft from "../Assests/Products/Soft_foil_wrapper.png";
 import Alu from "../Assests/Products/alu.png";
 import Foil from "../Assests/Products/Foil_Lid.png";
 
@@ -19,11 +19,12 @@ const offerings = [
       "Durable, customizable, and designed for secure sealing across food, cosmetics, and pharmaceutical applications.",
     image: Foil,
   },
- {
-      title: "Polyester Laminates",
-      description: "Provides excellent printability and innovative packing solutions for a range of applications.They offer durability and moisture resistance.",
-      image: Polyester,
-    },
+  {
+    title: "Soft Foil Chocolate Wrapping",
+    description:
+      "Premium, food-grade foil ensuring freshness, protection, and an elegant finish for your chocolates.",
+    image: Soft,
+  },
 ];
 
 const KeyOffering = () => {

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
 import Button1 from "../buttons/Button1";
 import Aluminium from "../Assests/Products/Aluminium_Blister_Foil.png";
 import Bopp from "../Assests/Products/bopp.png";
@@ -9,10 +8,10 @@ import Glassine from "../Assests/Products/glassine.png";
 import Polyester from "../Assests/Products/Polyester.png";
 import Pr from "../Assests/Products/pr.png";
 import PVC from "../Assests/Products/pvc.png";
+import Soft from "../Assests/Products/Soft_foil_wrapper.png";
 import Alu from "../Assests/Products/alu.png";
 import Foil from "../Assests/Products/Foil_Lid.png";
 import Tripple from "../Assests/Products/triple.png";
-import Button3 from "../buttons/Button3";
 
 const products = [
   {
@@ -26,6 +25,12 @@ const products = [
     description:
       "Durable, customizable, and designed for secure sealing across food, cosmetics, and pharmaceutical applications.",
     image: Foil,
+  },
+  {
+    title: "Soft Foil Chocolate Wrapping",
+    description:
+      "Food-grade foil ensuring freshness, and an elegant finish for your chocolates,Provides a protective barrier against moisture.",
+    image: Soft,
   },
   {
     title: "Polyester Laminates",
@@ -60,7 +65,7 @@ const products = [
   {
     title: "PP Resin Granules for IV Fluid",
     description:
-      "High quality, durable, reliable material for IV fluid bottles, essential building blocks for a wide range of plastic products.",
+      "High quality, durable, reliable material for IV fluid bottles,Essential building blocks for a wide range of plastic products.",
     image: Pr,
   },
   {
@@ -72,7 +77,7 @@ const products = [
   {
     title: "ALU ALU FOIL",
     description:
-      "Protective, high-barrier material commonly used for packaging pharmaceuticals, superior quality at competitive rates.",
+      "Protective, high-barrier material commonly used for packaging pharmaceuticals.pharmaceuticals,Superior quality at competitive rates.",
     image: Alu,
   },
 ];
@@ -80,12 +85,10 @@ const products = [
 const Products = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const navigate = useNavigate();
 
   return (
-    <div className="text-center p-6 mt-10 md:p-10 relative mb-20">
-      {/* Header Section */}
-      <motion.div
+    <div className="text-center p-6 mt-10 md:p-10">
+     <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
@@ -109,81 +112,67 @@ const Products = () => {
         </div>
       </motion.div>
 
-      {/* Product Grid */}
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, ease: "easeOut", staggerChildren: 0.3 }}
-        viewport={{ once: true }}
-        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-6 mt-8 mx-2 md:mx-4 lg:mx-12 relative"
-      >
-        {products
-          .slice(0, window.innerWidth <= 768 ? 3 : 6) // Show 3 products on mobile
-          .map((product, index) => (
-            <motion.div
-              key={index}
-              className="relative"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              onMouseMove={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                setMousePosition({
-                  x: e.clientX - rect.left,
-                  y: e.clientY - rect.top,
-                });
+       initial={{ opacity: 0, y: 50 }}
+       whileInView={{ opacity: 1, y: 0 }}
+       transition={{ duration: 0.8, ease: "easeOut", staggerChildren: 0.3 }}
+       viewport={{ once: true }} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:grid-cols-2 gap-6 mt-8 mx-2 md:mx-4 lg:mx-12">
+        {products.map((product, index) => (
+          <motion.div
+            key={index}
+            className="relative"
+            onMouseEnter={() => setHoveredIndex(index)}
+            onMouseLeave={() => setHoveredIndex(null)}
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              setMousePosition({
+                x: e.clientX - rect.left,
+                y: e.clientY - rect.top,
+              });
+            }}
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true }}
+          >
+            {/* Border layer */}
+            <div
+              className="absolute inset-0 rounded-lg border-[1px] border-gray-300 pointer-events-none"
+              style={{
+                borderImageSource:
+                  hoveredIndex === index
+                    ? "linear-gradient(90deg, #ec4899, #8b5cf6)"
+                    : "none",
+                borderImageSlice: hoveredIndex === index ? 1 : "none",
+                maskImage:
+                  hoveredIndex === index
+                    ? `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,1) 15px, rgba(255,255,255,0.2) 80px, rgba(255,255,255,0) 100px)`
+                    : "none",
+                WebkitMaskImage:
+                  hoveredIndex === index
+                    ? `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,1) 15px, rgba(255,255,255,0.2) 80px, rgba(255,255,255,0) 100px)`
+                    : "none",
               }}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: "easeOut" }}
-              viewport={{ once: true }}
-            >
-              {/* Border Layer */}
-              <div
-                className="absolute inset-0 rounded-lg border-[1px] border-gray-300 pointer-events-none"
-                style={{
-                  borderImageSource:
-                    hoveredIndex === index
-                      ? "linear-gradient(90deg, #ec4899, #8b5cf6)"
-                      : "none",
-                  borderImageSlice: hoveredIndex === index ? 1 : "none",
-                  maskImage:
-                    hoveredIndex === index
-                      ? `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,1) 15px, rgba(255,255,255,0.2) 80px, rgba(255,255,255,0) 100px)`
-                      : "none",
-                  WebkitMaskImage:
-                    hoveredIndex === index
-                      ? `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(255,255,255,1) 15px, rgba(255,255,255,0.2) 80px, rgba(255,255,255,0) 100px)`
-                      : "none",
-                }}
+            />
+
+            {/* Main card content */}
+            <div className="p-6 rounded-lg shadow-md text-center flex flex-col h-auto md:h-auto border-2 border-transparent">
+              <img
+                src={product.image}
+                alt={product.title}
+                className="w-full h-56 object-cover rounded-lg"
               />
-              {/* Main Card Content */}
-              <div className="p-6 rounded-lg shadow-md text-center flex flex-col h-auto md:h-auto border-2 border-transparent">
-                <img
-                  src={product.image}
-                  alt={product.title}
-                  className="w-full h-56 object-cover rounded-lg"
-                />
-                <div className="text-xl font-semibold mt-4">
-                  {product.title}
-                </div>
-                <div className="text-gray-600 mt-2 text-sm md:text-base">
-                  {product.description}
-                </div>
-                <div className="mt-4">
-                  <Button1 text="Download Brochure" />
-                </div>
+              <div className="text-xl font-semibold mt-4">{product.title}</div>
+              <div className="text-gray-600 mt-2 text-sm md:text-base">
+                {product.description}
               </div>
-            </motion.div>
-          ))}
+              <div className="mt-4">
+                <Button1 text="Download Brochure" />
+              </div>
+            </div>
+          </motion.div>
+        ))}
       </motion.div>
-
-      {/* Black Shadow at Bottom */}
-      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black to-transparent pointer-events-none" />
-
-      {/* Explore Button Positioned Correctly */}
-      <div className="flex justify-center mt-12 md:mt-20">
-        <Button3 to="/products" text="Explore" />
-      </div>
     </div>
   );
 };

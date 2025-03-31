@@ -42,7 +42,7 @@ const Navbar = () => {
           <li key={path}>
             <Link
               to={path}
-              className={`hover:text-[#8C6E63] ${location.pathname === path ? "text-[#8C6E63] font-semibold" : ""}`}
+              className={`hover:text-purple-600 ${location.pathname === path ? "text-purple-600 font-semibold" : ""}`}
             >
               {label}
             </Link>
@@ -51,13 +51,13 @@ const Navbar = () => {
       </ul>
 
       {/* Desktop Sign-Up Button */}
-      <button className="hidden md:block bg-gradient-to-r from-[#D3A376] to-[#8C6E63] text-white px-5 py-2 rounded-full text-l hover:scale-105 duration-300">
+      <button className="hidden md:block bg-gradient-to-r from-pink-500 to-purple-600 text-white px-5 py-2 rounded-full text-l hover:scale-105 duration-300">
         Quote
       </button>
 
       {/* Mobile Menu Button */}
       <div className="md:hidden flex items-center">
-        <button onClick={toggleMenu} className="text-2xl text-[#8C6E63] focus:outline-none">
+        <button onClick={toggleMenu} className="text-2xl text-purple-600 focus:outline-none">
           {isMenuOpen ? <FiX /> : <FiMenu />}
         </button>
       </div>
@@ -66,7 +66,7 @@ const Navbar = () => {
       <div
         className={`fixed top-0 right-0 w-3/4 max-w-xs h-full bg-white shadow-lg transform ${isMenuOpen ? "translate-x-0" : "translate-x-full"} transition-transform duration-300 md:hidden flex flex-col items-center p-6`}
       >
-        <button onClick={toggleMenu} className="text-2xl text-[#8C6E63] self-end mb-6">
+        <button onClick={toggleMenu} className="text-2xl text-purple-600 self-end mb-6">
           <FiX />
         </button>
         <ul className="flex flex-col space-y-6 font-medium text-center">
@@ -81,7 +81,7 @@ const Navbar = () => {
               <Link
                 to={path}
                 onClick={toggleMenu}
-                className={`hover:text-[#8C6E63] ${location.pathname === path ? "text-[#8C6E63] font-semibold" : ""}`}
+                className={`hover:text-purple-600 ${location.pathname === path ? "text-purple-600 font-semibold" : ""}`}
               >
                 {label}
               </Link>
@@ -89,7 +89,7 @@ const Navbar = () => {
           ))}
         </ul>
         {/* Mobile Sign-Up Button */}
-        <button className="mt-6 bg-gradient-to-r from-[#D3A376] to-[#8C6E63] text-white px-5 py-2 rounded-full text-l hover:scale-105 duration-300">
+        <button className="mt-6 bg-gradient-to-r from-pink-500 to-purple-600 text-white px-5 py-2 rounded-full text-l hover:scale-105 duration-300">
           Quote
         </button>
       </div>

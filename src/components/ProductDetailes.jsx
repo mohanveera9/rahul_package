@@ -2,11 +2,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import Button1 from "../buttons/Button1";
 import Aluminium from "../Assests/Products/Aluminium_Blister_Foil.png";
-import granule from "../Assests/Products/granule.png";
+import Bopp from "../Assests/Products/bopp.png";
 import Four from "../Assests/Products/four_ply.png";
 import Glassine from "../Assests/Products/glassine.png";
 import Polyester from "../Assests/Products/Polyester.png";
+import Pr from "../Assests/Products/pr.png";
 import PVC from "../Assests/Products/pvc.png";
+import Soft from "../Assests/Products/Soft_foil_wrapper.png";
 import Alu from "../Assests/Products/alu.png";
 import Foil from "../Assests/Products/Foil_Lid.png";
 import Tripple from "../Assests/Products/triple.png";
@@ -16,8 +18,8 @@ const products = [
     title: "Aluminium Blister Foil",
     description: [
       "Commonly used in the pharmaceutical industry for packaging tablets and capsules.",
-      "Rahul Packaging offers high-quality lidding foils developed under clean and hygienic conditions to ensure product safety.",
-      "Primer coated Aluminium foil, hard tempered with HSL coating, available in thicknesses ranging from 20 to 30 microns.",
+      "Developed under clean and hygienic conditions, available in both plain and printed forms.",
+      "Primer coated Aluminium foil, hard tempered with HSL coating, available in 20-30 microns thickness.",
     ],
     image: Aluminium,
   },
@@ -31,51 +33,62 @@ const products = [
     image: Foil,
   },
   {
+    title: "Soft Foil Chocolate Wrapping",
+    description: [
+      "Premium, food-grade foil ensuring freshness, and an elegant finish for your chocolates,Provides a protective barrier against moisture..",
+      "Made from thin aluminum foil or laminated foil-paper composite,Often coated with food-safe lacquer to prevent direct contact with chocolate.",
+      "Offers hygienic packaging by preventing contamination,Easy to wrap & shape, conforming to different chocolate sizes and designs.",
+    ],
+    image: Soft,
+  },
+  {
     title: "Polyester Laminates",
     description: [
       "Widely used in flexible packaging, offering durability and moisture resistance.",
-      "Rahul Packaging provides excellent printability and innovative packing solutions, making them suitable for a range of applications.",
+      "Provides excellent printability and innovative packing solutions for a range of applications.",
     ],
     image: Polyester,
   },
   {
-    title: "4 Ply Laminate Pouches (Paper, Poly, Aluminium, Poly)",
+    title: "4 Ply Laminate Pouches",
     description: [
-      "Rahul Packaging manufactures and exports a wide range of 3Ply/4PLY Laminate Pouches for its esteemed clients.",
-      "These pouches combine multiple layers to provide enhanced protection for various products.",
-      "Commonly used in the food and pharmaceutical industries for packaging items like snacks, powders, and more.",
+      "Rahul Packaging manufacture and export wide range of 3Ply/4PLY Laminate Pouches to our esteemed clients.  These pouches combine multiple layers to provide enhanced protection for various products. ",
+      "Our manufacturing unit is well equipped with advanced techniques that assist us to develop the flawless range of products that are commonly used in the food and pharmaceutical industries for packaging items like snacks, powders, and more.",
     ],
     image: Four,
   },
   {
     title: "Glassine Paper Poly",
     description: [
-      "Rahul Packaging is a trusted name among Glassine Paper Suppliers, ensuring a defect-free range reaches its clients.",
-      "Glassine paper is a smooth and glossy paper often combined with polyethylene, suitable for packaging confectionery, cosmetics, and pharmaceuticals.",
+      "Rahul Packaging is a trusted name among Glassine Paper Suppliers; we make sure that a defect-free range reaches our clients. Glassine paper is a smooth and glossy paper that is often combined with polyethylene to create packaging materials suitable for items like confectionery, cosmetics, and pharmaceuticals.",
+      "Smooth and glossy paper combined with polyethylene, ideal for packaging confectionery, cosmetics, and pharmaceuticals.",
+      "Ensures defect-free delivery to clients with high quality control standards.",
     ],
     image: Glassine,
   },
   {
-    title: "Polypropylene Granules",
+    title: "PP Resin Granules for IV Fluid Bottles",
     description: [
-      "Rahul Packaging offers high-quality polypropylene granules (PP resins) to fulfill your manufacturing needs.",
-      "Polypropylene (PP) Granules are the building blocks for a wide range of plastic products used daily.",
+      "High-quality polypropylene (PP) resins for manufacturing needs.",
+      "Essential building blocks for a wide range of plastic products.",
     ],
-    image: granule,
+    image: Pr,
   },
   {
-    title: "Triple Laminate Foils (Paper, Poly, Aluminium)",
+    title: "Triple Laminate Foils",
     description: [
-      "Packing for conservative products like confectionery, tea, and consumables.",
-      "These laminates offer a combination of strength, barrier properties, and printability.",
-      "The final product specifications are customized as per the agreement with customers based on the type of products to be packed.",
+      "Rahul Packaging also offers packing for conservative products like confectionery, tea, consumables etc. These laminates offer a combination of strength, barrier properties, and printability. ",
+      "The final product specifications are made as per agreed pact with the customers based on the type of products that are to be packed. These foils are usually used for packing pouch.",
+      "Used for packing confectionery, tea, consumables, and more.",
+      "Offers a combination of strength, barrier properties, and printability, ensuring product quality and appearance.",
     ],
     image: Tripple,
   },
   {
     title: "Alu-Alu Foil",
     description: [
-      "Rahul Packaging manufactures Alu-Alu foils used exclusively in the pharmaceutical industry for blister packaging.",
+      "Rahul Packaging also manufactures Alu-Alu foils used exclusively in the pharmaceutical industry for blister packaging. ",
+      "Manufactured exclusively for the pharmaceutical industry for blister packaging.",
       "Available in 45 & 50 microns, offering cost-saving benefits and better mileage.",
       "Superior quality at competitive rates, with a focus on customer satisfaction and quality assurance.",
     ],
@@ -86,7 +99,7 @@ const products = [
     description: [
       "PVC: A versatile plastic used in various industries, including packaging and construction.",
       "PVDC: A high-barrier coating enhancing moisture and oxygen resistance in packaging films and foils.",
-      "Rahul Packaging utilizes advanced coating technology to ensure superior solutions for the healthcare industry.",
+      "Advanced coating technology used for superior healthcare solutions.",
     ],
     image: PVC,
   },
